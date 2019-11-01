@@ -119,7 +119,7 @@ def get_new_json(type_mopian,id):
     for f11 in name:
         key_ = key.split(".")
         key_length = len(key_)
-        with open(f11, 'r',encoding='utf-8') as f:
+        with open(f11, 'r',encoding='gbk') as f:
             json_data = json.load(f)
             i = 0
             a = json_data
@@ -132,10 +132,12 @@ def get_new_json(type_mopian,id):
                     a = a[key_[i]]
                     i = i + 1
         f.close()
-        with open(f11, 'w',encoding='utf-8') as f1:
+        with open(f11, 'w',encoding='gbk') as f1:
             json.dump(json_data, f1, ensure_ascii=False)
         f1.close()
 
+
+# get_new_json(0,"C122222222")
 
 #获取窗口句柄，一个列表形式
 def get_handles(driver):

@@ -24,7 +24,7 @@ from ThreeDimensional_Project.website.test_case.model.config import *
 
 #传参，可以传多个,以英文逗号分隔，如["C1111111","C2222222","C333333333"]
 
-caseid=["BC01000021741"]
+caseid=["BC01000022661"]
 
 patientname=["线下患者姓名"]    #只有创建新病例阶段的线下病例才需要在此处传参
 

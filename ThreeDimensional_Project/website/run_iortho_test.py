@@ -1,5 +1,6 @@
 from ThreeDimensional_Project.website.test_case.CreateCRM import *
 from ThreeDimensional_Project.website.test_case.model.config import *
+import datetime
 
 #提示输入值的格式：x_x_x
 #第一个数字：0代表双膜，1代表单膜
@@ -26,8 +27,14 @@ from ThreeDimensional_Project.website.test_case.model.config import *
 
 #传参，可以传多个,以英文逗号分隔，如["C1111111","C2222222","C333333333"]
 
-caseid=["C01001252831"]
+caseid=["C01001257263"]
 
-patientname=["线下新建资料库"]    #只有创建新病例阶段的线下病例才需要在此处传参
+patientname=["线下request"]    #只有创建新病例阶段的线下病例才需要在此处传参
 
+
+start_time=datetime.datetime.now()
+print("开始时间："+str(start_time))
 run(caseid,sit_crm_username,sit_crm_password,sit_crm_url,patientname,institutions,doctorname)
+end_time=datetime.datetime.now()
+print("结束时间："+str(end_time))
+print("运行共耗时(s)："+str((end_time-start_time).seconds))

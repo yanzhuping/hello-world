@@ -128,281 +128,281 @@ class standard_process(ParametrizedTestCase):
 
         sleep(1)
 
-    # def test_c(self):
+    def test_c(self):
+
+        '''在iortho搜索病例、查看病例资料，并添加备注'''
+        print("搜索提交的病例")
+        serachIorthoPathient(self.driver,self.input_name)
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+
+        print("获取病例序号并设置全局变量")
+        globals()["caseid"] = getCaseNum(self.driver)
+
+        print("添加备注")
+        addNotes(self.driver)
+        insert_img(self.driver,"患者详情页.jpg", 'page-patient-detail')
+
+        print("查看病例资料\n")
+        self.driver.find_element_by_xpath(
+            u"(.//*[normalize-space(text()) and normalize-space(.)='编辑病例'])[1]/following::div[1]").click()
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        sleep(1.5)
+        insert_img(self.driver,"病例资料.jpg")
+
+
+        #新加的
+
+        self.driver.close()
+
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+
+        return globals()["caseid"]
+
+    def test_d(self):
+        '''查看收获记录以及cds中的委托加工单'''
+        print("开始执行第四条用例：收货记录以及CDS资料")
+        print("登录crm")
+        #登录crm并查找用例1创建的的病例
+        loginCrm(self.driver,self.crmurl,self.crm_username,self.crm_password)
+
+        searchPatient(self.driver,globals()["caseid"])
+
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+
+        print("在crm中查找创建的病例并查看收获记录")
+        receivingRecords(self.driver)
+        insert_img(self.driver,"收货记录.jpg")
+
+        print("进入CDS查看病例资料以及委托加工单\n")
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        toViewCDSdata(self.driver)
+        self.driver.switch_to.window(get_handles(self.driver)[3])
+        insert_img(self.driver,"委托加工单.jpg")
+
+        # self.driver.switch_to.window(get_handles(self.driver)[1])
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+
+    def test_e(self):
+        '''创建3D方案'''
+        print("开始执行第五条测试用例：创建3D方案：")
+
+        print("重命名文件以符合上传标准")
+        print("更改json文件中的caseinfo键对应的值")
+        print("上传stl文件")
+        print("上传ddm")
+        get_new_json(globals()["caseid"],1)
+
+        uploadStlAndDdm(self.driver,globals()["caseid"],1,"1_1")
+
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+
+        print("设计3D方案")
+        dsignScheme(self.driver)
+
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        self.driver.refresh()
+        sleep(3)
+
+        print("上传ods四个文件")
+        uploadOds(self.driver, 1,"1_1", globals()["caseid"], 0, 1, 1)
+
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        print("加载同步、处理警告、提交\n")
+        acceptAlert(self.driver)
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[0])
+
+    def test_f(self):
+        '''在iortho查看3D方案'''
+
+        print("开始执行第六条测试用例：在iortho查看创建的3D方案:")
+
+
+        serachIorthoPathient(self.driver,self.input_name)
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+
+        print("等待数据同步到iortho，等待65s.....\n")
+        sleep(65)
+        self.driver.refresh()
+
+
+    def test_g(self):
+        '''检查报价单'''
+        self.driver.find_element_by_class_name('bill.ng-scope').click()
+        sleep(2)
+        self.driver.switch_to_window(get_handles(self.driver)[2])
+        insert_img(self.driver,'质检报告单.jpg')
+        self.driver.close()
+        self.driver.switch_to_window(get_handles(self.driver)[1])
+
+
+
+    def test_h(self):
+        '''通过待办事项进入第一个3D方案'''
+        # 点击待办事项
+        self.driver.find_element_by_class_name('case-name.layout-flex-1.ng-binding').click()
+
+        # 怎么知道已经加载完成，可以点击播放？暂时先等待
+        sleep(45)
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        toDoFeedback3D(self.driver)
+        sleep(4)
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        self.driver.refresh()
+
+    def test_i(self):
+        '''进入crm编辑意见修改任务单，并且点击意见不修改'''
+        loginCrm(self.driver,self.crmurl,self.crm_username,self.crm_password)
+        searchPatient(self.driver,globals()["caseid"])
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        self.driver.find_element_by_xpath(
+            '//*[@id="list_subpanel_ea_case_ea_tasks_1"]/table/tbody/tr[3]/td[1]/span/a').click()
+        sleep(1.5)
+        self.driver.find_element_by_id("no_modified_tasks").click()
+        self.driver.switch_to.alert.accept()
+        sleep(1.5)
+
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[0])
+        sleep(30)
+
+    def test_j(self):
+        '''回到iortho从增强入口批准目标位方案'''
+        serachIorthoPathient(self.driver, self.input_name)
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        self.driver.find_element_by_xpath("//span[@class='ng-binding' and text()='目标位3D方案1']").click()
+
+        #这是弹出的打开方式选择器
+        self.driver.find_element_by_class_name('web-design-list-hover-btn.mrg-b-20').click()
+        sleep(45)
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        approval3D(self.driver)
+        sleep(5)
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        sleep(40)
+
+    def test_k(self):
+        '''在crm中将已经批准的3D方案意见回传'''
+        self.driver.refresh()
+        loginCrm(self.driver,self.crmurl,self.crm_username,self.crm_password)
+        searchPatient(self.driver,globals()["caseid"])
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        ideaBack3D(self.driver)
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[0])
+
+
+    def test_l(self):
+        '''对于已经意见回传的3D方案再次确认'''
+        try:
+            serachIorthoPathient(self.driver, self.input_name)
+            self.driver.switch_to.window(get_handles(self.driver)[1])
+            self.driver.refresh()
+            self.driver.find_element_by_xpath("//span[@class='ng-binding' and text()='目标位3D方案1']").click()
+
+            # 这是弹出的打开方式选择器
+            self.driver.find_element_by_class_name('web-design-list-hover-btn.mrg-b-20').click()
+            sleep(45)
+            self.driver.switch_to.window(get_handles(self.driver)[2])
+            approval3D(self.driver)
+            sleep(5)
+            self.driver.close()
+            self.driver.switch_to.window(get_handles(self.driver)[1])
+        except:
+            self.driver.switch_to.window(get_handles(self.driver)[1])
+
+    def test_m(self):
+        '''设计全设计3D方案'''
+        self.driver.refresh()
+        loginCrm(self.driver, self.crmurl, self.crm_username, self.crm_password)
+        searchPatient(self.driver, globals()["caseid"])
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        #点击当前阶段
+        self.driver.find_element_by_xpath(
+            '//*[@id="list_subpanel_ea_case_ea_stage_1"]/table/tbody/tr[3]/td[1]/span/a').click()
+        sleep(1.5)
+        dsignScheme(self.driver)
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        uploadOds(self.driver, 1, "1_2", globals()["caseid"], 0, 2, 2)
+        sleep(2)
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        acceptAlert(self.driver)
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[0])
+
+
+    def test_n(self):
+        '''回到iortho，查看全设计方案'''
+        serachIorthoPathient(self.driver,self.input_name)
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+
+        print("等待数据同步到iortho，等待65s.....\n")
+        sleep(65)
+        self.driver.refresh()
     #
-    #     '''在iortho搜索病例、查看病例资料，并添加备注'''
-    #     print("搜索提交的病例")
-    #     serachIorthoPathient(self.driver,self.input_name)
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #
-    #     print("获取病例序号并设置全局变量")
-    #     globals()["caseid"] = getCaseNum(self.driver)
-    #
-    #     print("添加备注")
-    #     addNotes(self.driver)
-    #     insert_img(self.driver,"患者详情页.jpg", 'page-patient-detail')
-    #
-    #     print("查看病例资料\n")
-    #     self.driver.find_element_by_xpath(
-    #         u"(.//*[normalize-space(text()) and normalize-space(.)='编辑病例'])[1]/following::div[1]").click()
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     sleep(1.5)
-    #     insert_img(self.driver,"病例资料.jpg")
-    #
-    #
-    #     #新加的
-    #
-    #     self.driver.close()
-    #
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #
-    #     return globals()["caseid"]
-    #
-    # def test_d(self):
-    #     '''查看收获记录以及cds中的委托加工单'''
-    #     print("开始执行第四条用例：收货记录以及CDS资料")
-    #     print("登录crm")
-    #     #登录crm并查找用例1创建的的病例
-    #     loginCrm(self.driver,self.crmurl,self.crm_username,self.crm_password)
-    #
-    #     searchPatient(self.driver,globals()["caseid"])
-    #
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #
-    #     print("在crm中查找创建的病例并查看收获记录")
-    #     receivingRecords(self.driver)
-    #     insert_img(self.driver,"收货记录.jpg")
-    #
-    #     print("进入CDS查看病例资料以及委托加工单\n")
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     toViewCDSdata(self.driver)
-    #     self.driver.switch_to.window(get_handles(self.driver)[3])
-    #     insert_img(self.driver,"委托加工单.jpg")
-    #
-    #     # self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #
-    # def test_e(self):
-    #     '''创建3D方案'''
-    #     print("开始执行第五条测试用例：创建3D方案：")
-    #
-    #     print("重命名文件以符合上传标准")
-    #     print("更改json文件中的caseinfo键对应的值")
-    #     print("上传stl文件")
-    #     print("上传ddm")
-    #     get_new_json(globals()["caseid"],1)
-    #
-    #     uploadStlAndDdm(self.driver,globals()["caseid"],1,"1_1")
-    #
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #
-    #     print("设计3D方案")
-    #     dsignScheme(self.driver)
-    #
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     self.driver.refresh()
-    #     sleep(3)
-    #
-    #     print("上传ods四个文件")
-    #     uploadOds(self.driver, 1,"1_1", globals()["caseid"], 0, 1, 1)
-    #
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     print("加载同步、处理警告、提交\n")
-    #     acceptAlert(self.driver)
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[0])
-    #
-    # def test_f(self):
-    #     '''在iortho查看3D方案'''
-    #
-    #     print("开始执行第六条测试用例：在iortho查看创建的3D方案:")
-    #
-    #
-    #     serachIorthoPathient(self.driver,self.input_name)
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #
-    #     print("等待数据同步到iortho，等待65s.....\n")
-    #     sleep(65)
-    #     self.driver.refresh()
-    #
-    #
-    # def test_g(self):
-    #     '''检查报价单'''
-    #     self.driver.find_element_by_class_name('bill.ng-scope').click()
-    #     sleep(2)
-    #     self.driver.switch_to_window(get_handles(self.driver)[2])
-    #     insert_img(self.driver,'质检报告单.jpg')
-    #     self.driver.close()
-    #     self.driver.switch_to_window(get_handles(self.driver)[1])
-    #
-    #
-    #
-    # def test_h(self):
-    #     '''通过待办事项进入第一个3D方案'''
-    #     # 点击待办事项
-    #     self.driver.find_element_by_class_name('case-name.layout-flex-1.ng-binding').click()
-    #
-    #     # 怎么知道已经加载完成，可以点击播放？暂时先等待
-    #     sleep(45)
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     toDoFeedback3D(self.driver)
-    #     sleep(4)
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     self.driver.refresh()
-    #
-    # def test_i(self):
-    #     '''进入crm编辑意见修改任务单，并且点击意见不修改'''
-    #     loginCrm(self.driver,self.crmurl,self.crm_username,self.crm_password)
-    #     searchPatient(self.driver,globals()["caseid"])
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     self.driver.find_element_by_xpath(
-    #         '//*[@id="list_subpanel_ea_case_ea_tasks_1"]/table/tbody/tr[3]/td[1]/span/a').click()
-    #     sleep(1.5)
-    #     self.driver.find_element_by_id("no_modified_tasks").click()
-    #     self.driver.switch_to.alert.accept()
-    #     sleep(1.5)
-    #
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[0])
-    #     sleep(30)
-    #
-    # def test_j(self):
-    #     '''回到iortho从增强入口批准目标位方案'''
-    #     serachIorthoPathient(self.driver, self.input_name)
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     self.driver.find_element_by_xpath("//span[@class='ng-binding' and text()='目标位3D方案1']").click()
-    #
-    #     #这是弹出的打开方式选择器
-    #     self.driver.find_element_by_class_name('web-design-list-hover-btn.mrg-b-20').click()
-    #     sleep(45)
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     approval3D(self.driver)
-    #     sleep(5)
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     sleep(40)
-    #
-    # def test_k(self):
-    #     '''在crm中将已经批准的3D方案意见回传'''
-    #     self.driver.refresh()
-    #     loginCrm(self.driver,self.crmurl,self.crm_username,self.crm_password)
-    #     searchPatient(self.driver,globals()["caseid"])
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     ideaBack3D(self.driver)
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[0])
-    #
-    #
-    # def test_l(self):
-    #     '''对于已经意见回传的3D方案再次确认'''
-    #     try:
-    #         serachIorthoPathient(self.driver, self.input_name)
-    #         self.driver.switch_to.window(get_handles(self.driver)[1])
-    #         self.driver.refresh()
-    #         self.driver.find_element_by_xpath("//span[@class='ng-binding' and text()='目标位3D方案1']").click()
-    #
-    #         # 这是弹出的打开方式选择器
-    #         self.driver.find_element_by_class_name('web-design-list-hover-btn.mrg-b-20').click()
-    #         sleep(45)
-    #         self.driver.switch_to.window(get_handles(self.driver)[2])
-    #         approval3D(self.driver)
-    #         sleep(5)
-    #         self.driver.close()
-    #         self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     except:
-    #         self.driver.switch_to.window(get_handles(self.driver)[1])
-    #
-    # def test_m(self):
-    #     '''设计全设计3D方案'''
-    #     self.driver.refresh()
-    #     loginCrm(self.driver, self.crmurl, self.crm_username, self.crm_password)
-    #     searchPatient(self.driver, globals()["caseid"])
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     #点击当前阶段
-    #     self.driver.find_element_by_xpath(
-    #         '//*[@id="list_subpanel_ea_case_ea_stage_1"]/table/tbody/tr[3]/td[1]/span/a').click()
-    #     sleep(1.5)
-    #     dsignScheme(self.driver)
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     uploadOds(self.driver, 1, "1_2", globals()["caseid"], 0, 2, 2)
-    #     sleep(2)
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     acceptAlert(self.driver)
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[0])
-    #
-    #
-    # def test_n(self):
-    #     '''回到iortho，查看全设计方案'''
-    #     serachIorthoPathient(self.driver,self.input_name)
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #
-    #     print("等待数据同步到iortho，等待65s.....\n")
-    #     sleep(65)
-    #     self.driver.refresh()
-    #
-    # def test_o(self):
-    #     '''全设计3D超时，通过3shape上传重新提交模型'''
-    #     self.driver.find_element_by_xpath("//span[@class='ng-binding' and text()='方案2']").click()
-    #
-    #     # 这是弹出的打开方式选择器
-    #     self.driver.find_element_by_class_name('web-design-list-hover-btn.mrg-b-20').click()
-    #     sleep(45)
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     timeoutUploadAgain3Shape(self.driver)
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     sleep(60)
-    #     self.driver.refresh()
-    #
-    # def test_p(self):
-    #     '''3D的3shape重传以后，检查cds的资料和收获记录'''
-    #     loginCrm(self.driver, self.crmurl, self.crm_username, self.crm_password)
-    #     searchPatient(self.driver, globals()["caseid"])
-    #
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     self.driver.switch_to.frame("otherPage")
-    #     self.driver.find_element_by_xpath('//*[@id="phase-0"]/div[1]/div').click()
-    #     insert_img(self.driver,'3D重新上传之原始stl变化.jpg')
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     receivingRecords(self.driver)
-    #     insert_img(self.driver,'3D重新上传之收获记录.jpg')
-    #
-    # def test_q(self):
-    #     '''对于重新上传的3D方案不修改'''
-    #     self.driver.find_element_by_id('ea_case_ea_stage_1ea_case_ida').click()
-    #     self.driver.find_element_by_xpath(
-    #         '//*[@id="list_subpanel_ea_case_ea_tasks_1"]/table/tbody/tr[3]/td[1]/span/a').click()
-    #     self.driver.find_element_by_id('no_modified_tasks').click()
-    #     self.driver.switch_to.alert.accept()
-    #     sleep(45)
-    #     self.driver.close()
-    #     self.driver.switch_to.window(get_handles(self.driver)[0])
-    #
-    #
-    # def test_r(self):
-    #     '''回到iortho重新批准3D全设计方案'''
-    #     serachIorthoPathient(self.driver, self.input_name)
-    #     self.driver.switch_to.window(get_handles(self.driver)[1])
-    #     self.driver.refresh()
-    #     self.driver.find_element_by_xpath("//span[@class='ng-binding' and text()='方案2']").click()
-    #
-    #     # 这是弹出的打开方式选择器
-    #     self.driver.find_element_by_class_name('web-design-list-hover-btn.mrg-b-20').click()
-    #     sleep(45)
-    #     self.driver.switch_to.window(get_handles(self.driver)[2])
-    #     approval3D(self.driver)
+    def test_o(self):
+        '''全设计3D超时，通过3shape上传重新提交模型'''
+        self.driver.find_element_by_xpath("//span[@class='ng-binding' and text()='方案2']").click()
+
+        # 这是弹出的打开方式选择器
+        self.driver.find_element_by_class_name('web-design-list-hover-btn.mrg-b-20').click()
+        sleep(45)
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        timeoutUploadAgain3Shape(self.driver)
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        sleep(60)
+        self.driver.refresh()
+
+    def test_p(self):
+        '''3D的3shape重传以后，检查cds的资料和收获记录'''
+        loginCrm(self.driver, self.crmurl, self.crm_username, self.crm_password)
+        searchPatient(self.driver, globals()["caseid"])
+
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        self.driver.switch_to.frame("otherPage")
+        self.driver.find_element_by_xpath('//*[@id="phase-0"]/div[1]/div').click()
+        insert_img(self.driver,'3D重新上传之原始stl变化.jpg')
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        receivingRecords(self.driver)
+        insert_img(self.driver,'3D重新上传之收获记录.jpg')
+
+    def test_q(self):
+        '''对于重新上传的3D方案不修改'''
+        self.driver.find_element_by_id('ea_case_ea_stage_1ea_case_ida').click()
+        self.driver.find_element_by_xpath(
+            '//*[@id="list_subpanel_ea_case_ea_tasks_1"]/table/tbody/tr[3]/td[1]/span/a').click()
+        self.driver.find_element_by_id('no_modified_tasks').click()
+        self.driver.switch_to.alert.accept()
+        sleep(45)
+        self.driver.close()
+        self.driver.switch_to.window(get_handles(self.driver)[0])
+
+
+    def test_r(self):
+        '''回到iortho重新批准3D全设计方案'''
+        serachIorthoPathient(self.driver, self.input_name)
+        self.driver.switch_to.window(get_handles(self.driver)[1])
+        self.driver.refresh()
+        self.driver.find_element_by_xpath("//span[@class='ng-binding' and text()='方案2']").click()
+
+        # 这是弹出的打开方式选择器
+        self.driver.find_element_by_class_name('web-design-list-hover-btn.mrg-b-20').click()
+        sleep(45)
+        self.driver.switch_to.window(get_handles(self.driver)[2])
+        approval3D(self.driver)
 
 
 if __name__ == '__main__':
