@@ -22,8 +22,15 @@ def dsignScheme(driver):
     select = Select(driver.find_element_by_css_selector("#design_type_c"))
     select.select_by_value("1")
 
+
     driver.find_element_by_css_selector("#SAVE_HEADER").click()
     sleep(1)
+    try:
+        driver.switch_to.alert.accept()
+        driver.find_element_by_css_selector("#SAVE_HEADER").click()
+        driver.switch_to.alert.accept()
+    except:
+        pass
 
     # 再次切回CDS
     driver.switch_to.window(get_handles(driver)[1])

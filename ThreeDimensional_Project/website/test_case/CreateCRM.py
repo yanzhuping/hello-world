@@ -15,6 +15,7 @@ from ThreeDimensional_Project.website.test_case.page_object.no_treatment import 
 from ThreeDimensional_Project.website.test_case.page_object.word_scheme import *
 from ThreeDimensional_Project.driver.driver import *
 from selenium.webdriver.support import expected_conditions as EC
+import traceback
 
 class Create3D():
     def __init__(self,caseid,username,password,url):
@@ -48,6 +49,9 @@ class Create3D():
             except Exception as e:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n",e)
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是双膜的第1阶段的第2个方案
@@ -72,6 +76,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是双膜的第1阶段的第3个方案
@@ -96,6 +103,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是双膜的第1阶段的第4个方案
@@ -120,6 +130,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是双膜的第2阶段的第1个方案
@@ -146,6 +159,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是双膜的第2阶段的第2个方案
@@ -170,6 +186,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是双膜的第3阶段的第1个方案
@@ -195,6 +214,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     #这是单膜的第1阶段的第1个方案
@@ -221,6 +243,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是单膜的第1阶段的第2个方案
@@ -245,6 +270,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是单膜的第1阶段的第3个方案
@@ -269,6 +297,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是单膜的第1阶段的第4个方案
@@ -293,6 +324,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是单膜的第2阶段的第1个方案
@@ -316,8 +350,11 @@ class Create3D():
                 acceptAlert(self.driver)
                 print(">>>病例号为 %s 的3D方案创建成功" % (id) + "\n")
             except:
-                print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
+                print("\033[31m 注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是单膜的第2阶段的第2个方案
@@ -342,6 +379,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     # 这是单膜的第3阶段的第1个方案
@@ -367,6 +407,9 @@ class Create3D():
             except:
                 print("\033[31m注意 ：病例号为 %s的病例创建3D失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
         self.driver.quit()
 
     def test_offline_new_guijiao(self,patientname,institutions,doctorname):
@@ -381,6 +424,9 @@ class Create3D():
             except:
                 print("\033[31m注意 :患者名为 %s的线下病例创建失败，继续执行下一个\033[0m" % (name) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
 
 
     def test_offline_new_photo(self,patientname,institutions,doctorname):
@@ -394,6 +440,9 @@ class Create3D():
             except:
                 print("\033[31m注意 :患者名为 %s的线下病例创建失败，继续执行下一个\033[0m" % (name) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
 
 
     def test_offline_middle_guijiao(self):
@@ -409,6 +458,9 @@ class Create3D():
             except:
                 print("\033[31m注意 :病例序号为 %s的线下中期硅胶病例创建失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
 
 
     def test_offline_middle_photo(self):
@@ -424,6 +476,9 @@ class Create3D():
             except:
                 print("\033[31m注意 :病例序号为 %s的线下中期口内照病例创建失败，继续执行下一个\033[0m" % (id) + "\n")
                 self.driver.switch_to.window(get_handles(self.driver)[0])
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
 
 
     def test_quality_reject(self):
@@ -477,12 +532,15 @@ class Create3D():
                 self.driver.quit()
             except:
                 print("病例号为%s的病例结束阶段失败，继续执行下一个"%id)
+                traceback_info = traceback.format_exc()
+                print(traceback_info)
+
 
 
 def run(caseid,username,password,url,patientname,institutions,doctorname):
     while True:
 
-        Num = input("请输入需要服务指令：" + "\n")
+        Num = input("请输入需要服务指令：")
         if Num=="0_1_1":
             Create3D(caseid, username, password, url).test_douple3D_1_1()
             break

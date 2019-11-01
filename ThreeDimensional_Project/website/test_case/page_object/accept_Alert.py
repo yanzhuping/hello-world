@@ -12,7 +12,12 @@ def acceptAlert(driver):
     sleep(3)
     try:
         driver.switch_to.alert.accept()
-        sleep(2)
+        sleep(1.5)
+        try:
+            driver.switch_to.alert.accept()
+            sleep(1.5)
+        except:
+            pass
     except:
         pass
 
