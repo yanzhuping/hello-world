@@ -12,9 +12,19 @@ run(g_config.get('username'),g_config.get('password'),g_config.get('url'),
 
 #命令
 '''
-python main.py --env=iortho_sit --caseid=['xxxxx'] --num=0_1_1
+双膜的第1阶段的第1个方案：python main.py --env=iortho_sit --caseid=['xxxxx'] --num=0_1_1
+单膜的第1阶段的第1个方案：python main.py --env=iortho_sit --caseid=['xxxxx'] --num=1_1_1
+
+
+python main.py --env=iortho_sit --caseid=['xxxxx'] --num=质检不合格
+python main.py --env=iortho_sit --caseid=['xxxxx'] --num=质检合格
+python main.py --env=iortho_sit --caseid=['xxxxx'] --num=不收治
+python main.py --env=iortho_sit --caseid=['xxxxx'] --num=文字方案
+python main.py --env=iortho_sit --caseid=['xxxxx'] --num=结束阶段
+
 
 python main.py --env=iortho_sit --patientname=yanzp --num=新建硅胶
+python main.py --env=iortho_sit --patientname=yanzp --num=新建口内照
 
 注意：
 如果是iortho_sit环境，可以不传入env参数，默认使用该环境
