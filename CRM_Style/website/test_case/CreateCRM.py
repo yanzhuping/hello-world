@@ -27,7 +27,7 @@ class Create3D():
 
     #这是双膜的第1阶段的第1个方案
     def test_douple3D_1_1(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -56,7 +56,7 @@ class Create3D():
 
     # 这是双膜的第1阶段的第2个方案
     def test_douple3D_1_2(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm,请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -83,7 +83,7 @@ class Create3D():
 
     # 这是双膜的第1阶段的第3个方案
     def test_douple3D_1_3(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -110,7 +110,7 @@ class Create3D():
 
     # 这是双膜的第1阶段的第4个方案
     def test_douple3D_1_4(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -137,7 +137,7 @@ class Create3D():
 
     # 这是双膜的第2阶段的第1个方案
     def test_douple3D_2_1(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -166,7 +166,7 @@ class Create3D():
 
     # 这是双膜的第2阶段的第2个方案
     def test_douple3D_2_2(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -193,7 +193,7 @@ class Create3D():
 
     # 这是双膜的第3阶段的第1个方案
     def test_douple3D_3_1(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -221,7 +221,7 @@ class Create3D():
 
     #这是单膜的第1阶段的第1个方案
     def test_single3D_1_1(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -250,7 +250,7 @@ class Create3D():
 
     # 这是单膜的第1阶段的第2个方案
     def test_single3D_1_2(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -277,7 +277,7 @@ class Create3D():
 
     # 这是单膜的第1阶段的第3个方案
     def test_single3D_1_3(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -304,7 +304,7 @@ class Create3D():
 
     # 这是单膜的第1阶段的第4个方案
     def test_single3D_1_4(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -331,7 +331,7 @@ class Create3D():
 
     # 这是单膜的第2阶段的第1个方案
     def test_single3D_2_1(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -359,7 +359,7 @@ class Create3D():
 
     # 这是单膜的第2阶段的第2个方案
     def test_single3D_2_2(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -386,7 +386,7 @@ class Create3D():
 
     # 这是单膜的第3阶段的第1个方案
     def test_single3D_3_1(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for id in self.caseid:
             try:
@@ -413,7 +413,7 @@ class Create3D():
         self.driver.quit()
 
     def test_offline_new_guijiao(self,patientname,institutions,doctorname):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for name in patientname:
             try:
@@ -430,7 +430,7 @@ class Create3D():
 
 
     def test_offline_new_photo(self,patientname,institutions,doctorname):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         for name in patientname:
             try:
@@ -446,7 +446,7 @@ class Create3D():
 
 
     def test_offline_middle_guijiao(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
 
         for id in self.caseid:
@@ -464,7 +464,7 @@ class Create3D():
 
 
     def test_offline_middle_photo(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
 
         for id in self.caseid:
@@ -482,7 +482,7 @@ class Create3D():
 
 
     def test_quality_reject(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         searchPatient(self.driver,self.caseid)
         self.driver.switch_to.window(get_handles(self.driver)[1])
@@ -492,7 +492,7 @@ class Create3D():
         print("创建成功")
 
     def test_quality_conformance(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         searchPatient(self.driver, self.caseid)
         self.driver.switch_to.window(get_handles(self.driver)[1])
@@ -502,7 +502,7 @@ class Create3D():
         print("创建成功")
 
     def test_no_treatment(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         searchPatient(self.driver, self.caseid)
         self.driver.switch_to.window(get_handles(self.driver)[1])
@@ -512,7 +512,7 @@ class Create3D():
         print("创建成功")
 
     def test_word_scheme(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
         searchPatient(self.driver, self.caseid)
         self.driver.switch_to.window(get_handles(self.driver)[1])
@@ -522,7 +522,7 @@ class Create3D():
         print("创建成功")
 
     def test_finish_phase(self):
-        print(">>>开始登录crm，因系统原因，登录时间可能较长，请耐心等候......" + "\n")
+        print(">>>开始登录crm，请耐心等候......" + "\n")
         Login(self.driver, self.url, self.username, self.password)
 
         for id in self.caseid:
