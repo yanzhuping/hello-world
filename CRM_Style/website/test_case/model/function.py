@@ -192,12 +192,12 @@ def get_opt(argv):
     return t_opt
 
 #处理传入的病例序号参数
-def change_caseid_type():
+def get_caseid():
     val=get_opt(sys.argv[1:]).get("caseid","1")
     if val == 1:
         pass
     if val !="":
-        val=eval(val)
+        val=val
     return val
 
 #处理服务号参数，根据该参数执行不同的脚本
@@ -213,7 +213,7 @@ def get_num():
 def get_patientname():
     val=get_opt(sys.argv[1:]).get('patientname')
     if val is None:
-        val="线下"+ random.randint(11111,99999)
+        val="线下"+ str(random.randint(11111,99999))
     if val != "":
         val=val
     return val
