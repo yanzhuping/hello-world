@@ -1,4 +1,4 @@
 # hello-world
-记录学习中的点滴
-主要发布pytho代码
-python版本为3.7
+#记录学习中的点滴
+#主要发布pytho代码
+#python版本为3.5及以上均可
