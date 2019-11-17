@@ -1,7 +1,7 @@
 from time import sleep
-from website.test_case.models.function import choice_photo
+from Auto_iortho.website.test_case.models.function import choice_photo
 import random
-from website.test_case.models.config import *
+from Auto_iortho.website.test_case.models.config import *
 
 def uploadPhoto(driver):
     driver.find_element_by_id("pic-0").send_keys(random.choice(choice_photo()))

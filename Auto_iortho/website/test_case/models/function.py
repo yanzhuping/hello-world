@@ -5,7 +5,7 @@ import smtplib
 from email.header import Header
 from email.mime.text import MIMEText
 from time import sleep
-from website.test_case.models.config import *
+from Auto_iortho.website.test_case.models.config import *
 import pymysql
 import xlrd
 import win32com.client

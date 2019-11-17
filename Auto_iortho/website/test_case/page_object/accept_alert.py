@@ -1,4 +1,4 @@
-from website.test_case.models.function import *
+from Auto_iortho.website.test_case.models.function import *
 
 def acceptAlert(driver):
 

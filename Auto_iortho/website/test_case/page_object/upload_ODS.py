@@ -1,4 +1,4 @@
-from website.test_case.models.function import *
+from Auto_iortho.website.test_case.models.function import *
 
 def uploadOds(driver,type_mopian,num,id,phase,title,up):  #up这个参数是每一个阶段上传4个文件对应页的上传按钮
     # 上传ods，即4个文件

@@ -1,11 +1,11 @@
 
 #这是adv环境的运行文件
 
-from driver import HTMLTestRunner
-from website.test_case.test_case import *
+from Auto_iortho.driver import HTMLTestRunner
+from Auto_iortho.website.test_case.test_case import *
 from time import strftime
-from website.test_case.models.function import readDataFromMySQL
-from website.test_case.models.config import *
+from Auto_iortho.website.test_case.models.function import readDataFromMySQL
+from Auto_iortho.website.test_case.models.config import *
 
 print("start test..")
 
