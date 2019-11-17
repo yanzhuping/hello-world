@@ -1,27 +1,27 @@
 import unittest
-from driver.driver import *
-from website.test_case.models.config import *
-from website.test_case.page_object.accept_alert import *
-from website.test_case.page_object.add_notes import *
-from website.test_case.page_object.adult_basic_information import *
-from website.test_case.page_object.crm_receiving_records import *
-from website.test_case.page_object.dsign_scheme import *
-from website.test_case.page_object.login_crm import *
-from website.test_case.page_object.login_iortho import *
-from website.test_case.page_object.select_product import *
-from website.test_case.page_object.serach_crm_patient import *
-from website.test_case.page_object.serach_iortho_patient import *
-from website.test_case.page_object.upload_ODS import *
-from website.test_case.page_object.upload_photos import *
-from website.test_case.page_object.upload_stlandddm import *
-from website.test_case.page_object.upload_tooth_model import *
-from website.test_case.page_object.view_CDSdata import *
-from website.test_case.page_object.new_worksheet import *
-from website.test_case.page_object.to_do_feedback_3D import *
-from website.test_case.page_object.approval_3D import *
-from website.test_case.page_object.idea_back_3D import *
-from website.test_case.page_object.timeout_upload_again_3shape import *
-
+from Auto_iortho.driver.driver import *
+from Auto_iortho.website.test_case.models.config import *
+from Auto_iortho.website.test_case.page_object.accept_alert import *
+from Auto_iortho.website.test_case.page_object.add_notes import *
+from Auto_iortho.website.test_case.page_object.adult_basic_information import *
+from Auto_iortho.website.test_case.page_object.crm_receiving_records import *
+from Auto_iortho.website.test_case.page_object.dsign_scheme import *
+from Auto_iortho.website.test_case.page_object.login_crm import *
+from Auto_iortho.website.test_case.page_object.login_iortho import *
+from Auto_iortho.website.test_case.page_object.select_product import *
+from Auto_iortho.website.test_case.page_object.serach_crm_patient import *
+from Auto_iortho.website.test_case.page_object.serach_iortho_patient import *
+from Auto_iortho.website.test_case.page_object.upload_ODS import *
+from Auto_iortho.website.test_case.page_object.upload_photos import *
+from Auto_iortho.website.test_case.page_object.upload_stlandddm import *
+from Auto_iortho.website.test_case.page_object.upload_tooth_model import *
+from Auto_iortho.website.test_case.page_object.view_CDSdata import *
+from Auto_iortho.website.test_case.page_object.new_worksheet import *
+from Auto_iortho.website.test_case.page_object.to_do_feedback_3D import *
+from Auto_iortho.website.test_case.page_object.approval_3D import *
+from Auto_iortho.website.test_case.page_object.idea_back_3D import *
+from Auto_iortho.website.test_case.page_object.timeout_upload_again_3shape import *
+from Auto_iortho.website.test_case.models.function import *
 
 
 class ParametrizedTestCase(unittest.TestCase):

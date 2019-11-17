@@ -3,7 +3,7 @@
 
 from time import sleep
 
-from website.test_case.models.function import pageDown
+from Auto_iortho.website.test_case.models.function import pageDown
 
 
 def receivingRecords(driver):
