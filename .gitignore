@@ -1,3 +1,5 @@
 .idea/**/libraries
 .idea/**/hello-world.iml
 .idea/**/workspace.xml
+.idea/*.iml
+.idea/*.xml
