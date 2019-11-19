@@ -2,8 +2,8 @@
 
 
 
-from driver import HTMLTestRunner
-from website.test_case.test_case import *
+from Auto_iortho.driver import HTMLTestRunner
+from Auto_iortho.website.test_case.test_case import *
 from time import strftime
 
 print("start test..")
