@@ -3,9 +3,9 @@
 
 import random
 import pymysql
-from website.test_case.models.function import get_fileBasePath
+from Auto_iortho.website.test_case.models.function import get_fileBasePath
 import xlsxwriter
-from website.test_case.models.config import *
+from Auto_iortho.website.test_case.models.config import *
 
 def getRandomName():
     '''将姓、名存入不同的列表'''
