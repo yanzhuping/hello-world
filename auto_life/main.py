@@ -64,4 +64,4 @@ if __name__ == "__main__":
     main_handler = MainHandler()
     main_handler.do_execute()
 
-# python main.py --env=iortho_sit --test_case=execute  --level=1
+# python work.py --env=iortho_sit --test_case=execute  --level=1

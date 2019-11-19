@@ -2,114 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbb9023-4af8-412e-9d1f-50c24664a5eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/hello-world.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_Style/website/test_case/page_object/new_create3D.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/doupleDDM/C01001257993.ddm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/doupleDDM/C01001257993.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/doupleDDM/C01001257993.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/doupleDDM/C01001257993.ods" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/doupleDDM/C01001257993_V6.ods" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/singleDDM/C01001254574.ddm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/singleDDM/C01001254574.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/singleDDM/C01001254574.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/singleDDM/C01001254574.ods" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_Style/test_data/singleDDM/C01001254574_V6.ods" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRM_Style/website/test_case/model/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_Style/website/test_case/model/function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/.idea/auto_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/.idea/auto_test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/.idea/libraries/R_User_Library.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/driver/HTMLTestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/driver/HTMLTestRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/driver/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/driver/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/driver/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/driver/driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/run_adv.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/run_adv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/run_sit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/run_sit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/models/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/models/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/models/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/models/function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/models/get_names.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/models/get_names.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/accept_alert.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/accept_alert.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/add_notes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/add_notes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/adult_basic_information.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/adult_basic_information.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/approval_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/approval_3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/crm_receiving_records.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/crm_receiving_records.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/dsign_scheme.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/dsign_scheme.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/idea_back_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/idea_back_3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/login_crm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/login_crm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/login_iortho.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/login_iortho.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/new_worksheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/new_worksheet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/select_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/select_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/serach_crm_patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/serach_crm_patient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/serach_iortho_patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/serach_iortho_patient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/timeout_upload_again_3shape.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/timeout_upload_again_3shape.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/to_do_feedback_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/to_do_feedback_3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/upload_ODS.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/upload_ODS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/upload_photos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/upload_photos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/upload_stlandddm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/upload_stlandddm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/upload_tooth_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/upload_tooth_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/page_object/view_CDSdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/view_CDSdata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_case/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_case/test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/doupleDDM/C01001240726_1111.ddm" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/doupleDDM/C01001240726_1111.ddm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/doupleDDM/C01001240726_1111.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/doupleDDM/C01001240726_1111.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/doupleDDM/C01001240726_1111.json" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/doupleDDM/C01001240726_1111.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/doupleDDM/C01001240726_1111.ods" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/doupleDDM/C01001240726_1111.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/doupleDDM/C01001240726_1111_V6.ods" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/doupleDDM/C01001240726_1111_V6.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/firstname.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/firstname.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/lastname.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/lastname.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/midlename.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/midlename.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/names.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/names.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/002.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/003.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/003.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/004.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/005.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/005.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/006.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/006.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/007.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/007.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/008.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/008.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/009.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/009.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/010.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/010.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/011.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/011.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/012.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/012.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/013.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/013.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/014.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/014.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/015.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/015.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/016.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/016.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/017.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/018.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/018.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/019.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/019.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/020.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/020.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/021.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/021.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/022.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/022.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/023.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/023.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/024.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/024.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/photos/025.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/photos/025.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/singleDDM/C01001249556_1.ddm" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/singleDDM/C01001249556_1.ddm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/singleDDM/C01001249556_1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/singleDDM/C01001249556_1.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/singleDDM/C01001249556_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/singleDDM/C01001249556_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/singleDDM/C01001249556_1.ods" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/singleDDM/C01001249556_1.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_data/singleDDM/C01001249556_1_V6.ods" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_data/singleDDM/C01001249556_1_V6.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-09-27 14_56_34result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-09-27 14_56_34result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-09-27 18_07_19result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-09-27 18_07_19result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-09-27 18_11_11result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-09-27 18_11_11result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-03 16_30_30result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-03 16_30_30result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-03 16_31_30result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-03 16_31_30result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-03 16_32_04result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-03 16_32_04result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 14_25_13result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 14_25_13result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 14_30_26result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 14_30_26result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 14_31_04result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 14_31_04result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 15_23_08result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 15_23_08result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 15_29_43result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 15_29_43result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 15_32_04result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 15_32_04result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 15_39_53result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 15_39_53result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 15_52_37result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 15_52_37result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 16_32_14result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 16_32_14result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-08 16_34_06result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-08 16_34_06result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/2019-10-11 09_44_49result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/2019-10-11 09_44_49result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/screenshot/加工单.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/screenshot/加工单.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/screenshot/基本信息.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/screenshot/基本信息.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/screenshot/完善的预览页.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/screenshot/完善的预览页.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/screenshot/工作台.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/screenshot/工作台.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/screenshot/患者详情页.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/screenshot/患者详情页.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/screenshot/未完善的预览页.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/screenshot/未完善的预览页.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/screenshot/病例资料.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/screenshot/病例资料.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_test/website/test_report/screenshot/质检报告单.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_iortho/website/test_report/screenshot/质检报告单.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_life/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_life/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/work.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,13 +32,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/auto-life/main.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auto_life/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state>
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Auto_iortho/website/run_sit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <element signature="e#17#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,15 +84,18 @@
         <option value="$PROJECT_DIR$/ThreeDimensional_Project/website/test_case/CreateCRM_1.py" />
         <option value="$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM.py" />
         <option value="$PROJECT_DIR$/CRM_Style/config.ini" />
-        <option value="$PROJECT_DIR$/CRM_Style/website/test_case/model/function.py" />
         <option value="$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM_1.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/work.py" />
+        <option value="$PROJECT_DIR$/CRM_Style/website/test_case/page_object/new_create3D.py" />
+        <option value="$PROJECT_DIR$/CRM_Style/website/test_case/page_object/no_treatment.py" />
+        <option value="$PROJECT_DIR$/CRM_Style/website/test_case/model/function.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-75" />
+    <option name="y" value="121" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -178,6 +105,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,26 +116,60 @@
             <path>
               <item name="hello-world" type="b2602c69:ProjectViewProjectNode" />
               <item name="hello-world" type="462c0819:PsiDirectoryNode" />
-              <item name="auto-life" type="462c0819:PsiDirectoryNode" />
+              <item name="CRM_Style" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hello-world" type="b2602c69:ProjectViewProjectNode" />
               <item name="hello-world" type="462c0819:PsiDirectoryNode" />
-              <item name="auto-life" type="462c0819:PsiDirectoryNode" />
+              <item name="CRM_Style" type="462c0819:PsiDirectoryNode" />
+              <item name="driver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-world" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-world" type="462c0819:PsiDirectoryNode" />
+              <item name="CRM_Style" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-world" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-world" type="462c0819:PsiDirectoryNode" />
+              <item name="CRM_Style" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-world" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-world" type="462c0819:PsiDirectoryNode" />
+              <item name="CRM_Style" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
               <item name="test_case" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-world" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-world" type="462c0819:PsiDirectoryNode" />
+              <item name="CRM_Style" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="test_case" type="462c0819:PsiDirectoryNode" />
+              <item name="page_object" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-world" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PrivateCode\hello-world" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PrivateCode\hello-world" />
       <recent name="D:\PrivateCode\hello-world\ThreeDimensional_Project\website\test_case" />
@@ -225,7 +187,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_iortho_test (1)">
+  <component name="RunManager" selected="Python.function (1)">
+    <configuration name="function (1)" type="PythonConfigurationType" factoryName="Python">
+      <module name="hello-world" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CRM_Style/website/test_case/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CRM_Style/website/test_case/model/function.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="function" type="PythonConfigurationType" factoryName="Python">
       <module name="hello-world" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -355,18 +338,18 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19669509" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5400891" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28396437" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3051225" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.6258352" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32962137" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -388,13 +371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/quality_conformance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="70" lean-forward="true" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThreeDimensional_Project/test_data/singleDDM/C01001248397_1111.json" />
     <entry file="file://$PROJECT_DIR$/Auto_iortho/website/test_case/page_object/add_notes.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -404,16 +380,6 @@
         <state>
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auto_iortho/website/run_sit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#17#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -441,23 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/dsign_Scheme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/accept_Alert.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/python37/Lib/configparser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -478,13 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="597" selection-start-line="597" selection-end-line="597" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/upload_STLAndDDM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="35" column="105" lean-forward="true" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
         </state>
       </provider>
     </entry>
@@ -519,20 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="521" column="21" selection-start-line="521" selection-start-column="21" selection-end-line="521" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/LoginCRM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/1986093431/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -540,70 +468,209 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/model/function.py">
+    <entry file="file://$PROJECT_DIR$/auto-life/.vscode/settings.json" />
+    <entry file="file://$PROJECT_DIR$/auto-life/readme.md" />
+    <entry file="file://$PROJECT_DIR$/auto-life/config.ini" />
+    <entry file="file://$PROJECT_DIR$/auto-life/libs/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/auto-life/driver/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/auto-life/main.py" />
+    <entry file="file://$USER_HOME$/Desktop/auto_life/driver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/quality_reject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="195" column="47" lean-forward="true" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
+        <state relative-caret-position="418">
+          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/quality_conformance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="48" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM_1.py">
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/upload_STLAndDDM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6776">
-          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        <state relative-caret-position="748">
+          <caret line="35" column="105" lean-forward="true" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/upload_ods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/LoginCRM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/dsign_Scheme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="35" column="14" selection-start-line="35" selection-end-line="35" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/serach_patient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/new_create3D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="127" column="8" lean-forward="true" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+          <folding>
+            <element signature="e#16#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/no_treatment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/offline_new_guijiao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRM_Style/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="330">
+          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/word_scheme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        <state relative-caret-position="44">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/accept_Alert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/offline_middle_guijiao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/offline_middle_photo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/CreateCRM_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/finish_phase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/work.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="57" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auto-life/.vscode/settings.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auto-life/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="154">
-            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/model/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auto-life/config.ini">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auto-life/libs/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auto-life/driver/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auto-life/main.py">
+    <entry file="file://$PROJECT_DIR$/CRM_Style/website/test_case/page_object/offline_new_photo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto_life/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auto_iortho/website/run_sit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#17#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
