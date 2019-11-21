@@ -45,7 +45,8 @@ def update_screen(ai_settings,screen,ship,aliens,bullets):
     # 每次循环时都重绘屏幕,采用设置中的背景色
     screen.fill(ai_settings.bg_color)
     #在飞船和外形人后面重绘所有子弹
-    for bullet in bullets.sprites():
+    # for bullet in bullets.sprites():
+    for bullet in bullets:
         bullet.draw_bullet()
     ship.blitme()
     aliens.draw(screen)
@@ -62,22 +63,29 @@ def update_bullets(bullets):
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
 
+def get_number_aliens_x(ai_settings,alien_width):
+    '''计算每行可以容纳多少个外星人'''
+    available_space_x = ai_settings.screen_width - 2 * alien_width
+    number_aliens_x = int(available_space_x / (2 * alien_width))
+    return number_aliens_x
+
+def create_alien(ai_settings,screen,aliens,alien_number):
+    '''创建一个外星人并将其放在当前行'''
+    alien = Alien(ai_settings, screen)
+    alien_width = alien.rect.width
+    alien.X = alien_width + 2 * alien_width * alien_number
+    alien.rect.x = alien.x
+    aliens.add(alien)
+
 def create_fleet(ai_settings,screen,aliens):
     '''创建外星人群'''
     #创建一个外星人，并计算一行可以容纳多少个外星人
     #外星人之间的间距为外星人的宽度
-    alien = Alien(ai_settings,screen)
-    alien_width = alien.rect.width
-    print(alien_width)
-    available_space_x = ai_settings.screen_width - 2 * alien_width
-    number_aliens_x = int(available_space_x / (2 * alien_width))
-    print(number_aliens_x)
+    alien = Alien(ai_settings, screen)
+    number_aliens_x = get_number_aliens_x(ai_settings,alien.rect.width)
 
     #创建第一行外星人
     for alien_number in range(number_aliens_x):
-        #创建一个外星人并将其加入当前行
-        alien = Alien(ai_settings,screen)
-        alien.X = alien_width + 2 * alien_width * alien_number
-        print(alien.x)
-        alien.rect.x = alien.x
-        aliens.add(alien)
+        create_alien(ai_settings,screen,aliens,alien_number)
+
+
