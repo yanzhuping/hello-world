@@ -10,7 +10,7 @@ run(g_config.get('username'),g_config.get('password'),
 
 #命令
 '''
-双膜的第1阶段的第1个方案：python work.py --env=iortho_sit --caseid=C12345678901 --num=3d --dir=1
+双膜的第1阶段的第1个方案：python work.py --env=iortho_sit --caseid=C01001265453 --num=3d --dir=1
 单膜的第1阶段的第1个方案：python work.py --env=iortho_sit --caseid=C12345678901 --num=3d
 
 python work.py --env=iortho_sit --caseid=Cxxxxxxx --num=质检不合格
