@@ -22,7 +22,7 @@ def sendRequests(s,apiData):
         else:
             print(apiData["params"])
             par = eval(apiData["params"])
-            print(par)
+            # print(par)
 
         if apiData["body"] == "":
             body_data = None
@@ -51,7 +51,7 @@ def sendRequests(s,apiData):
 if __name__ == '__main__':
 
     s = getCookie()
-    testData = readExcel(r'D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx', "Sheet1")
+    testData = readExcel(r'D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx', "personal_center")
     response = sendRequests(s,testData[0])
     # print(response.json())
     print(response.text)

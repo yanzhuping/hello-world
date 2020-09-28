@@ -39,10 +39,7 @@ data={}
 re1=s.request('post',url,headers=header,data=data,verify=False)
 
 
-# url="https://opm-cas.sh-sit.eainc.com:8443/OPM/doctorSpread/addDoctorSpread"
-url="https://opm-cas.sh-sit.eainc.com:8443/OPM/doctorSpread/updateDoctorSpread"
-# data={"crmUserCode":"D201811210001","type":"1","content":"nininini",}
-data={"crmUserCode":"D201811210001","type":"1","spreadId":"487","content":"接口测试专用文本-哈哈2222tttttgggg"}
+url="https://opm-cas.sh-sit.eainc.com:8443/OPM/docCert/addOrUpdateDocCert"
 
 m = MultipartEncoder(fields=data,boundary='------' + ''.join(random.sample(string.ascii_letters + string.digits, 32)))
 header['content-type']=m.content_type
