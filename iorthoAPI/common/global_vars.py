@@ -4,7 +4,11 @@ import re
 global_vars={}
 set_global_vars = [{"name": "accountId", "query": ["data","assistantList" ,0, 'accountId']},
                    {"name": "accountId1", "query": ["data","assistantList" ,1, 'accountId']},
-                   {"name": "accountId2", "query": ["data","assistantList" ,2, 'accountId']},]
+                   {"name": "accountId2", "query": ["data","assistantList" ,2, 'accountId']},
+                   {"name": "spreadId", "query": ["doctorSpreadList",0 , 'spreadId']},
+                   {"name": "spreadId1", "query": ["doctorSpreadList",1, 'spreadId']},
+
+                   ]
 def dict_get(dic, locators, default=None):
     '''
     :param dic: 输入需要在其中取值的原始字典 <dict>,即接口响应数据

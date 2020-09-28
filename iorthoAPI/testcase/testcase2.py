@@ -24,6 +24,7 @@ class Test2(unittest.TestCase):
 
     @data(*testData)
     def test_uploadimage_api(self,data):
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         print(data)
         re = sendRequests(self.s,data)
         # print(re.json())

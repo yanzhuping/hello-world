@@ -26,7 +26,7 @@ class Test2(unittest.TestCase):
     def test_uploadimage_api(self,data):
         print(data)
         re = sendRequests(self.s,data)
-        print(re.json())
+        # print(re.json())
         Assert_result().assert_result(data,re)
         sleep(0.5)
 
