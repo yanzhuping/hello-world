@@ -12,7 +12,7 @@ testData = readExcel(r"D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx",S
 # print(testData)
 
 @ddt
-class Test2(unittest.TestCase):
+class Test3(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -23,7 +23,7 @@ class Test2(unittest.TestCase):
         pass
 
     @data(*testData)
-    def test_uploadimage_api(self,data):
+    def test_assistant_api(self,data):
         print(data)
         re = sendRequests(self.s,data)
         # print(re.json())

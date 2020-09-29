@@ -38,9 +38,11 @@ url="https://opm-cas.sh-sit.eainc.com:8443/OPM/login/validatelogin"
 data={}
 re1=s.request('post',url,headers=header,data=data,verify=False)
 
+######分割线#########################################################
 
-url="https://opm-cas.sh-sit.eainc.com:8443/OPM/docCert/addOrUpdateDocCert"
 
+url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/submitFastTarget"
+data={"paramIn":'{"FTCaseCode":"","docCode":"D202009180002","docName":"严如玉","orgCode":"H201012070002","orgName":"深圳市儿童医院","patientName":"接口提交4","patientSex":1,"patientBirthdate":"1990-01-02","iprTooth":"0,0","extractionTooth":"","stlSource":"2","stlFileId":"","otherCaseId":248364}'}
 m = MultipartEncoder(fields=data,boundary='------' + ''.join(random.sample(string.ascii_letters + string.digits, 32)))
 header['content-type']=m.content_type
 

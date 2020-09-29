@@ -26,12 +26,11 @@ class Test1(unittest.TestCase):
         pass
 
     @data(*testData)
-    def test_uploadimage_api(self,data):
+    def test_image_api(self,data):
         print(data)
         re = sendRequests(self.s,data)
         # print(re.json())
         Assert_result().assert_result(data,re)
-
         sleep(0.5)
 
 
