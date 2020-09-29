@@ -1,7 +1,11 @@
 import re
 
-#获取多层嵌套的字典中的某个值
+
+
+#全局变量
 global_vars={}
+
+#全局变量设置列表
 set_global_vars = [{"name": "accountId", "query": ["data","assistantList" ,0, 'accountId']},
                    {"name": "accountId1", "query": ["data","assistantList" ,1, 'accountId']},
                    {"name": "accountId2", "query": ["data","assistantList" ,2, 'accountId']},
@@ -9,6 +13,8 @@ set_global_vars = [{"name": "accountId", "query": ["data","assistantList" ,0, 'a
                    {"name": "spreadId1", "query": ["doctorSpreadList",1, 'spreadId']},
 
                    ]
+
+#获取多层嵌套的字典中的某个值
 def dict_get(dic, locators, default=None):
     '''
     :param dic: 输入需要在其中取值的原始字典 <dict>,即接口响应数据
@@ -66,6 +72,8 @@ def set_global(set_global_vars,response_json):
 
         # print(global_vars)
         return global_vars
+
+
 # 解析字符串中全局变量并进行替换
 def resolve_global_var(pre_resolve_var, global_var_dic, global_var_regex='\${.*?}',
           match2key_sub_string_start_index=2, match2key_sub_string_end_index=-1):
@@ -111,6 +119,8 @@ def resolve_global_var(pre_resolve_var, global_var_dic, global_var_regex='\${.*?
 """
 
 if __name__ == '__main__':
+
+
     response_json = {'status': '1', 'errorCode': '', 'msg': '成功',
                      'data': {
                          'assistantList': [

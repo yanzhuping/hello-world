@@ -23,7 +23,7 @@ class Test2(unittest.TestCase):
         pass
 
     @data(*testData)
-    def test_uploadimage_api(self,data):
+    def test_personal_center_api(self,data):
         print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         print(data)
         re = sendRequests(self.s,data)

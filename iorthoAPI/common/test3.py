@@ -23,7 +23,7 @@ strr = r.text
 pat1 = r'= {execution: "(.*?)", _eventId:'
 execution = re.findall(pat1, strr)
 
-par1 = {'username': 'yanzp0857', 'password': '111111', 'execution': execution[0], '_eventId': 'submit','oginType': '0'}
+par1 = {'username': 'yanry4548', 'password': '333333', 'execution': execution[0], '_eventId': 'submit','oginType': '0'}
 r1 = s.post(base_url, headers=header, data=par1, allow_redirects=False, verify=False)
 location = r1.headers['Location']
 
@@ -43,20 +43,38 @@ r3  = s.request('GET', location, headers=header, allow_redirects=False, verify=F
 
 
 url="https://opm-cas.sh-sit.eainc.com:8443/OPM/login/validatelogin"
-data={}
-re1=s.request('post',url,headers=header,data=data,verify=False)
+data1={}
+re1=s.request('post',url,headers=header,data=data1,verify=False)
 
 
-url="https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/deleteAssistant"
-data={"accountId":"2677"}
-re=s.request('DELETE',url,headers=header,params=data,verify=False)
+####################################分隔线##########################################
 
-
-# url="https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/addAssistant"
-# data={"accountType":9,"crmOrgCode":"H201012070002","accountName":"python24"}
+# url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/submitFastTarget"
+# data={"paramIn":'{"FTCaseCode":"","docCode":"D202009180002","docName":"严如玉","orgCode":"H201012070002","orgName":"深圳市儿童医院","patientName":"接口提交6","patientSex":1,"patientBirthdate":"1990-01-02","iprTooth":"0,0","extractionTooth":"","stlSource":"2","stlFileId":"","otherCaseId":248364}'}
 # re=s.request('post',url,headers=header,data=data,verify=False)
 
+url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/uploadAttachment"
+params={"paramIn":'{"FTCaseId":0,"FTCaseCode":"","patientName":"rr","attType":"1","attId":-1,"attTag":"1"}'}
+files={"stlFile":('test_stl_file_U.stl',open(r'C:\Users\Administrator\Desktop\document\all-files\STL\test_stl_file_U.stl','rb'))}
+re=s.request('post',url,headers=header,params=params,files=files,verify=False,timeout=20)
+stlId1=re.json()["attId"]
 
-print(re.text)
+
+
+
+url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/uploadAttachment"
+params={"paramIn":'{"FTCaseId":0,"FTCaseCode":"","patientName":"rr","attType":"1","attId":-1,"attTag":"2"}'}
+files={"stlFile":('test_stl_file_L.stl',open(r'C:\Users\Administrator\Desktop\document\all-files\STL\test_stl_file_L.stl','rb'))}
+re3=s.request('post',url,headers=header,params=params,files=files,verify=False,timeout=20)
+stlId2=re3.json()["attId"]
+
+
+
+url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/submitFastTarget"
+data={"paramIn":'{"FTCaseCode":"","docCode":"D202009180002","docName":"严如玉","orgCode":"H201012070002","orgName":"深圳市儿童医院","patientName":"接口提交7","patientSex":1,"patientBirthdate":"1990-01-02","iprTooth":"0,0","extractionTooth":"","stlSource":"1","stlFileId":"%d,%d","otherCaseId":""}'%(stlId1,stlId2)}
+re=s.request('post',url,headers=header,data=data,verify=False)
+
+
 print(re.status_code)
-print(re.headers)
+print(re.text)
+# print(re.headers)
