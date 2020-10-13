@@ -57,6 +57,7 @@ url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/uploadAttachment"
 params={"paramIn":'{"FTCaseId":0,"FTCaseCode":"","patientName":"rr","attType":"1","attId":-1,"attTag":"1"}'}
 files={"stlFile":('test_stl_file_U.stl',open(r'C:\Users\Administrator\Desktop\document\all-files\STL\test_stl_file_U.stl','rb'))}
 re=s.request('post',url,headers=header,params=params,files=files,verify=False,timeout=20)
+print(re.json())
 stlId1=re.json()["attId"]
 
 
@@ -71,7 +72,7 @@ stlId2=re3.json()["attId"]
 
 
 url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/submitFastTarget"
-data={"paramIn":'{"FTCaseCode":"","docCode":"D202009180002","docName":"严如玉","orgCode":"H201012070002","orgName":"深圳市儿童医院","patientName":"接口提交7","patientSex":1,"patientBirthdate":"1990-01-02","iprTooth":"0,0","extractionTooth":"","stlSource":"1","stlFileId":"%d,%d","otherCaseId":""}'%(stlId1,stlId2)}
+data={"paramIn":'{"FTCaseCode":"","docCode":"D202009180002","docName":"严如玉","orgCode":"H201012070002","orgName":"深圳市儿童医院","patientName":"接口提交8","patientSex":1,"patientBirthdate":"1990-01-02","iprTooth":"0,0","extractionTooth":"","stlSource":"1","stlFileId":"%d,%d","otherCaseId":""}'%(stlId1,stlId2)}
 re=s.request('post',url,headers=header,data=data,verify=False)
 
 

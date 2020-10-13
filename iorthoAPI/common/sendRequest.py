@@ -4,6 +4,8 @@ import json
 import requests, string, random
 from requests_toolbelt import MultipartEncoder
 from iorthoAPI.common.global_vars import *
+import os
+from time import sleep
 
 
 def sendRequests(s,apiData):
@@ -14,13 +16,14 @@ def sendRequests(s,apiData):
         method = apiData["method"]
         url = apiData["url"]
         type = apiData["type"]
+        files=apiData['files']
         is_global=apiData["is_global"]
 
 
         if apiData["params"] == "":
             par = None
         else:
-            print(apiData["params"])
+            # print(apiData["params"])
             par = eval(apiData["params"])
             # print(par)
 
@@ -28,6 +31,7 @@ def sendRequests(s,apiData):
             body_data = None
         else:
             body_data = eval(apiData["body"])
+            # print(body_data)
 
         if type == "json":
             body = json.dumps(body_data)
@@ -37,11 +41,26 @@ def sendRequests(s,apiData):
         else:
             body = body_data
 
+        if files == "":
+            files=None
+        else:
+            files=eval(apiData['files'])
+            for key, value in files.items():
+                file_path = os.path.dirname(__file__)
+                base_dir = os.path.dirname(file_path)
+                base_dir = str(base_dir)
+                # 对路径的字符串进行替换
+                base_dir = base_dir.replace('\\', '/')
+                file_path = os.path.join(base_dir, 'data', value)
 
-        re = s.request(method=method,url=url,data=body,params=par,headers=header,verify=False)
+                files={key:(value,open(file_path,'rb'))}
 
+        re = s.request(method=method,url=url,data=body,params=par,files=files,headers=header,verify=False,timeout=20)
+
+        # print(re.json())
+
+        sleep(2)
         if is_global == "0":
-
             print(set_global(set_global_vars, re.json()))
         return re
 
@@ -51,8 +70,9 @@ def sendRequests(s,apiData):
 if __name__ == '__main__':
 
     s = getCookie()
-    testData = readExcel(r'D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx', "personal_center")
+    testData = readExcel(r'D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx', "makeit")
     response = sendRequests(s,testData[0])
+
+    # print(response.text)
+    # print(response.status_code)
     # print(response.json())
-    print(response.text)
-    print(response.status_code)
