@@ -14,7 +14,7 @@ def get_message(dc_env,dc_type,db_env=None,msg_type=None):
 
     cursor = db.cursor()
 
-    sql = "select distinct crmUserCode from opm_statetidingsInitial where msgType='%s' order by actionDate desc limit 10" % msg_type
+    sql = "select distinct crmUserCode from opm_statetidingsInitial where msgType='%s' order by actionDate desc limit 50" % msg_type
     cursor.execute(sql)
     usercode = cursor.fetchall()#这是获取医生编码
     print(usercode)
@@ -57,7 +57,7 @@ def get_message(dc_env,dc_type,db_env=None,msg_type=None):
 
 if __name__ == '__main__':
     #输入环境以及消息类型(具体消息类型参考message_type），可得到对应该消息类型的病例以及病例所属的账号和密码
-    # get_message('prod','iortho','sh_adv','a7')
-    # get_message('prod','comfos','bj_adv','c1')
+    # get_message('prod','iortho','sh_adv','c31')
+    get_message('prod','comfos','bj_adv','a51')
     # get_message('sit','comfos','bj_sit','a7')
-    get_message('sit','iortho','sh_sit','c31')
+    # get_message('sit','iortho','sh_sit','c31')

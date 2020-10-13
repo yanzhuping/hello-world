@@ -40,9 +40,9 @@ class Get_passwd():
 if __name__ == '__main__':
     ##在对应的环境输入用户名即可获得密码
     # Get_passwd('sit','comfos','bj_sit').decode_1('yanry4548')
-    Get_passwd('sit','iortho','sh_sit').decode_1('xiaos2039')
-    # Get_passwd('prod','comfos','bj_adv').decode_1('jinz1130')
-    # Get_passwd('prod', 'iortho', 'sh_adv').decode_1('cesys1378486')
+    # Get_passwd('sit','iortho','sh_sit').decode_1('xiaos2039')
+    # Get_passwd('prod','comfos','bj_adv').decode_1('guoln1616')
+    Get_passwd('prod', 'iortho', 'sh_adv').decode_1('wangmin')
 
 
 

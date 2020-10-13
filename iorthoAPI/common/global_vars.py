@@ -11,6 +11,10 @@ set_global_vars = [{"name": "accountId", "query": ["data","assistantList" ,0, 'a
                    {"name": "accountId2", "query": ["data","assistantList" ,2, 'accountId']},
                    {"name": "spreadId", "query": ["doctorSpreadList",0 , 'spreadId']},
                    {"name": "spreadId1", "query": ["doctorSpreadList",1, 'spreadId']},
+                   {"name": "pcId", "query": ["data","imageList", 20,'pcId']},
+                   {"name": "pcId1", "query": ["data","imageList", 0,'pcId']},
+                   {"name": "attId", "query": ["data","imageList", 0,'attId']},
+                   {"name": "makeit_attId", "query": ['attId']},
 
                    ]
 
