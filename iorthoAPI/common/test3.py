@@ -4,6 +4,7 @@ import logging
 import  time
 from urllib.parse import urlencode
 import json
+import random
 
 # s=requests.session()
 # # header = {
@@ -49,9 +50,22 @@ re1=s.request('post',url,headers=header,data=data1,verify=False)
 
 ####################################分隔线##########################################
 
+# url="https://opm-cas.sh-sit.eainc.com:8443/OPM/getToken/AliYunOss?refresh=1&bucketType=2"
+# re3=s.request('get',url,headers=header,verify=False)
+
 # url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/submitFastTarget"
-# data={"paramIn":'{"FTCaseCode":"","docCode":"D202009180002","docName":"严如玉","orgCode":"H201012070002","orgName":"深圳市儿童医院","patientName":"接口提交6","patientSex":1,"patientBirthdate":"1990-01-02","iprTooth":"0,0","extractionTooth":"","stlSource":"2","stlFileId":"","otherCaseId":248364}'}
+# data={"paramIn":'{"FTCaseCode":"","docCode":"D202009180002","docName":"严如玉","orgCode":"H201012070002","orgName":"深圳市儿童医院","patientName":"%s测试接口提交","patientSex":1,"patientBirthdate":"1990-01-02","iprTooth":"0,0","extractionTooth":"","stlSource":"2","stlFileId":"","otherCaseId":248364,"originalSmilePhoto":"pic/photo/1602659381401_b2447fef028c5494793cfbc65f570306.jpg","bucketId":2}'%(str(random.randint(11111,99999)))}
+#
 # re=s.request('post',url,headers=header,data=data,verify=False)
+
+###############################################################################
+
+
+
+
+
+
+
 
 url="https://opm-cas.sh-sit.eainc.com:8443/OPM/fastTarget/uploadAttachment"
 params={"paramIn":'{"FTCaseId":0,"FTCaseCode":"","patientName":"rr","attType":"1","attId":-1,"attTag":"1"}'}

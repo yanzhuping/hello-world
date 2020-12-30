@@ -1,14 +1,12 @@
 import threading
 from datetime import datetime
-
 import itchat
 from apscheduler.schedulers.blocking import BlockingScheduler
 from bs4 import BeautifulSoup
 from itchat.content import *
-
-import EverydayWechat.city_dict
 from EverydayWechat.Robot import *
 import re
+from EverydayWechat.city_dict import city_dict
 
 
 class gfweather:
@@ -44,7 +42,7 @@ class gfweather:
             girlfriend.get('wechat_name').strip()
             # 根据城市名称获取城市编号，用于查询天气。查看支持的城市为：http://cdn.sojson.com/_city.json
             city_name = girlfriend.get('city_name').strip()
-            city_code = city_dict.city_dict.get(city_name)
+            city_code = city_dict.get(city_name)
             if not city_code:
                 print('您输入的城市无法收取到天气信息')
                 break
@@ -55,7 +53,7 @@ class gfweather:
                         f"在一起的第一天日期：{girlfriend.get('start_date')}\n\t最后一句为：{girlfriend.get('sweet_words')}\n"
             init_msg += print_msg
 
-        print(u"*" * 50)
+        print(u"*" * 50)  #打印1条隔离带哈哈哈
         print(init_msg)
 
         hour, minute = [int(x) for x in alarm_timed.split(':')]
@@ -121,10 +119,10 @@ class gfweather:
 
         # 定时任务
         scheduler = BlockingScheduler()
-        # 每天9：30左右给女朋友发送每日一句
+        # 每天定时给女朋友发送每日一句
         scheduler.add_job(self.start_today_info, 'cron', hour=self.alarm_hour, minute=self.alarm_minute)
         # 每隔2分钟发送一条数据用于测试。
-        scheduler.add_job(self.start_today_info, 'interval', seconds=10800)
+        scheduler.add_job(self.start_today_info, 'interval', seconds=60)
         t = threading.Thread(target=self.itchatRun, name='LoopThread')
         t.start()
         scheduler.start()
@@ -204,6 +202,7 @@ class gfweather:
         every_msg = soup_texts.find_all('div', class_='fp-one-cita')[0].find('a').text
         return every_msg + "\n"
 
+    #打印、记录微信收到的文本消息
     @itchat.msg_register([TEXT, MAP, CARD, NOTE, SHARING])
     def text_reply(msg):
         try:
