@@ -5,6 +5,7 @@ from iorthoAPI.common.readExcel import *
 from iorthoAPI.common.createSession import *
 from time import sleep
 from iorthoAPI.common.assertions import Assert_result
+from iorthoAPI.common.fun import *
 
 
 # SheetNameList=["assistant","personal_center","image"]
@@ -14,7 +15,8 @@ from iorthoAPI.common.assertions import Assert_result
 #     testData.extend(testData_1)
 # # print(testData)
 
-testData = readExcel(r"D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx",SheetName="image")
+# testData = readExcel(r"D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx",SheetName="image")
+testData = readExcel(os.path.join(get_fileBasePath(),'data','apitest.xlsx'),SheetName="image")
 @ddt
 class Test1(unittest.TestCase):
 

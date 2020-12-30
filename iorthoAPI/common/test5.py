@@ -23,3 +23,11 @@ import os
 #
 # print(a)
 
+# #
+# selector=".pic-1-4"
+# se=selector.split(".")[1]
+# print(se)
+
+a='//label[@for="overbiteTwo1" and text()="伸长前牙"]/following-sibling::input'
+b=a.find('following-sibling')
+print(b)

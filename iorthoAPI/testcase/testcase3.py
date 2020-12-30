@@ -5,10 +5,10 @@ from iorthoAPI.common.readExcel import *
 from iorthoAPI.common.createSession import *
 from time import sleep
 from iorthoAPI.common.assertions import Assert_result
+from iorthoAPI.common.fun import *
 
 
-
-testData = readExcel(r"D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx",SheetName='assistant')
+testData = readExcel(os.path.join(get_fileBasePath(),'data','apitest.xlsx'),SheetName='assistant')
 # print(testData)
 
 @ddt
