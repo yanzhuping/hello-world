@@ -4,3 +4,4 @@
 .idea/*.iml
 .idea/*.xml
 request_test/**/reports
+/auto-life/test_data/

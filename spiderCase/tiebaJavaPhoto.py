@@ -1,6 +1,4 @@
 #爬取贴吧java吧的信息
-
-
 from lxml import html
 etree=html.etree
 import requests

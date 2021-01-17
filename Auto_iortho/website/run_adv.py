@@ -38,8 +38,8 @@ print("find latest report")
 latest_report=latest_report(report_dir)
 
 print("send email report..")
-send_mail(latest_report,e_server,e_user,e_password,e_sender,e_receives)
+# send_mail(latest_report,e_server,e_user,e_password,e_sender,e_receives)
 
-# send_mail_attachment(latest_report,e_server,e_user,e_password,e_sender,e_receives)  #发送带附件的邮件
+send_mail_attachment(latest_report,e_server,e_user,e_password,e_sender,e_receives)  #发送带附件的邮件
 
 print("Test end")
