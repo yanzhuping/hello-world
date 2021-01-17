@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2020-10-12 15:42:47</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:16.071286</p>
+<p class='attribute'><strong>Status:</strong> Pass 24</p>
+
+<p class='description'>接口测试</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcase1.Test1</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',6)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_image_api_1</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: {'id': '1', 'name': '影像资料库查询照片', 'describe': '参数正常', 'method': 'get', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/image/queryCloudImage', 'params': '{"caseId":0,"crmCaseCode":"C01001355172"}', 'body': '', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"查询成功"', 'expect_stacode': 200.0, 'errorCode': '"errorCode":""', 'is_run': '', 'is_global': '0'}
+{}
+{"caseId":0,"crmCaseCode":"C01001355172"}
+{'pcId': 29849, 'pcId1': 29588}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_image_api_2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: {'id': '2', 'name': '通用照片上传', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/image/uploadCloudImage', 'params': '', 'body': '{"caseId": 0,"crmCaseCode":"C01001355172","bucketId":2,"oriZip":1,"imgList":\'[{"attName":"微信图片_20190902092200.jpg","imgKey":"pic/photo/1602296054987_5e0f1bd8afad6439b4b2267710c92dbc.jpg","oriMd5":"5e0f1bd8afad6439b4b2267710c92dbc","zipMd5":"5e0f1bd8afad6439b4b2267710c92dbc","imageInfo":{"ImageWidth":{"value":"720"},"ImageHeight":{"value":"600"}}}]\'}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"上传成功"', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29588}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_image_api_3</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: {'id': '3', 'name': '通用照片上传', 'describe': '缺失casecode', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/image/uploadCloudImage', 'params': '', 'body': '{"caseId": 0,"crmCaseCode":"","bucketId":2,"oriZip":1,"imgList":\'[{"attName":"微信图片_20190902092200.jpg","imgKey":"pic/photo/1602296054987_5e0f1bd8afad6439b4b2267710c92dbc.jpg","oriMd5":"5e0f1bd8afad6439b4b2267710c92dbc","zipMd5":"5e0f1bd8afad6439b4b2267710c92dbc","imageInfo":{"ImageWidth":{"value":"720"},"ImageHeight":{"value":"600"}}}]\'}', 'type': '', 'expect_result': '"status":"0"', 'expect_msg': '"msg":""', 'expect_stacode': '200', 'errorCode': '"errorCode":"upload_10002"', 'is_run': '', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29588}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_image_api_4</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: {'id': '4', 'name': '影像资料库删除照片', 'describe': '参数正常', 'method': 'delete', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/image/deleteCloudImage', 'params': '{"pcId":global_vars[\'pcId1\']}', 'body': '', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":""', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29588}
+{"pcId":global_vars['pcId1']}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_image_api_5</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: {'id': '5', 'name': '查询新建加工单照片', 'describe': '参数正常', 'method': 'get', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/image/queryImage', 'params': '{"crmCaseCode":"C01001355172","draftId":34521,"phaseId":"6a655309-4f61-0783-c7d1-5f8114667864","phaseType":1}', 'body': '', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":""', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '', 'is_global': '0'}
+{'pcId': 29849, 'pcId1': 29588}
+{"crmCaseCode":"C01001355172","draftId":34521,"phaseId":"6a655309-4f61-0783-c7d1-5f8114667864","phaseType":1}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_image_api_6</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: {'id': '6', 'name': '更新新建加工单照片框照片-口内照', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/image/updateImage', 'params': '', 'body': '{"crmCaseCode":"C01001355172","draftId":34521,"phaseId":"6a655309-4f61-0783-c7d1-5f8114667864","phaseType":1,"imgList":\'[{"attId":0,"pcId":%d,"attType":"1","attTag":"1","position":""},{"attId":%s,"pcId":%d,"attType":"1","attTag":"0","position":"matrix(1,0,0,1,0,0)"}]\'%(global_vars["pcId"],global_vars["attId"],global_vars["pcId1"])}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":""', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcase2.Test2</td>
+    <td>11</td>
+    <td>11</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',11)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_01</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '1', 'name': '查询医生信息', 'describe': '参数正常', 'method': 'get', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/ec_account/queryDocInfo', 'params': '{"docCode":"D202009180002"}', 'body': '', 'type': '', 'expect_result': '', 'expect_msg': '', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635}
+{"docCode":"D202009180002"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_02</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '2', 'name': '更新医生个人信息-城市', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctor/updateDoctor', 'params': '', 'body': '{"cityId":"340800","cityName":"安庆","crmUserCode":"D202009180002","provinceId":"340000","provinceName":"安徽"}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_03</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+        pass</a>
+
+    <div id='div_pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.3: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '3', 'name': '查询待处理消息（小铃铛）列表', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctor/updatequeryBacklogMessage', 'params': '', 'body': '{"crmUserCode":"D202009180002"}', 'type': '', 'expect_result': '', 'expect_msg': '', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_04</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4')" >
+        pass</a>
+
+    <div id='div_pt2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.4: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '4', 'name': '更新病例消息(小铃铛)为已读', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctor/updatequeryBacklogMessage', 'params': '', 'body': '{"crmUserCode":"D202009180002"}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_05</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.5')" >
+        pass</a>
+
+    <div id='div_pt2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.5: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '5', 'name': '添加医生推广信息', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctorSpread/addDoctorSpread', 'params': '', 'body': '{"crmUserCode":"D202009180002","type":"1","content":"接口添加医生推广信息"}', 'type': 'form_data', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_06</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.6')" >
+        pass</a>
+
+    <div id='div_pt2.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.6: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '6', 'name': '查询医生推广信息', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctorSpread/queryDoctorSpreadList', 'params': '', 'body': '{"crmUserCode":"D202009180002"}', 'type': '', 'expect_result': '', 'expect_msg': '', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': '0'}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_07</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.7')" >
+        pass</a>
+
+    <div id='div_pt2.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.7: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '7', 'name': '更新医生推广信息', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctorSpread/updateDoctorSpread', 'params': '', 'body': '{"crmUserCode":"D202009180002","spreadId":str(global_vars[\'spreadId\']),"content":"接口更新医生推广信息"}', 'type': 'form_data', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_08</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.8')" >
+        pass</a>
+
+    <div id='div_pt2.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.8: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '8', 'name': '删除医生推广信息', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctorSpread/updateDoctorSpread', 'params': '', 'body': '{"crmUserCode":"D202009180002","spreadId":str(global_vars[\'spreadId1\']),"isDelete":"1"}', 'type': 'form_data', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_09</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.9')" >
+        pass</a>
+
+    <div id='div_pt2.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.9: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '9', 'name': '修改医生密码', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctor/updatePassWord', 'params': '', 'body': '{"crmUserCode":"D202009180002","userName":"yanry4548","oldPassWord":"333333","newPassWord":"333333","confirmPassWord":"333333"}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_10</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.10')" >
+        pass</a>
+
+    <div id='div_pt2.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.10: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '10', 'name': '更改医生的城市', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctor/updateDoctor', 'params': '', 'body': '{"crmUserCode":"D202009180002","cityId":"340800","cityName":"安庆","provinceId":"340000","provinceName":"安徽"}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_personal_center_api_11</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.11')" >
+        pass</a>
+
+    <div id='div_pt2.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.11: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{'id': '11', 'name': '上传资格证书', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/docCert/addOrUpdateDocCert', 'params': '{"docCode":"D202009180002","docName":"严如玉","docCertNo":"99999999"}', 'body': '{"certPic1":(\'Certificate_1.jpg\',open(r\'D:\\PrivateCode\\hello-world\\iorthoAPI\\data\\Certificate_1.jpg\',\'rb\')),"certPic2":(\'Certificate_2.jpg\',open(r\'D:\\PrivateCode\\hello-world\\iorthoAPI\\data\\Certificate_2.jpg\',\'rb\'))}', 'type': 'form_data', 'expect_result': '"status":1', 'expect_msg': '', 'expect_stacode': '200', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+{"docCode":"D202009180002","docName":"严如玉","docCertNo":"99999999"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcase3.Test3</td>
+    <td>7</td>
+    <td>7</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',7)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_assistant_api_1</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: {'id': '1', 'name': '医生创建普通助理', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/addAssistant', 'params': '', 'body': '{"accountType":3,"crmOrgCode":"H201012070002","accountName":"接口测试普通助理"}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_assistant_api_2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
+        pass</a>
+
+    <div id='div_pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.2: {'id': '2', 'name': '医生创建高级助理', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/addAssistant', 'params': '', 'body': '{"accountType":9,"crmOrgCode":"H201012070002","accountName":"接口测试高级助理"}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_assistant_api_3</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
+        pass</a>
+
+    <div id='div_pt3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.3: {'id': '3', 'name': '医生查询助理列表', 'describe': '参数正常', 'method': 'get', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/queryAssistantList', 'params': '', 'body': '', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '0', 'is_global': '0'}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507, 'accountId': 2106, 'accountId1': 2107, 'accountId2': 2108}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_assistant_api_4</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.4')" >
+        pass</a>
+
+    <div id='div_pt3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.4: {'id': '4', 'name': '医生删除助理账号', 'describe': '参数正常', 'method': 'delete', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/deleteAssistant', 'params': '{"accountId":global_vars["accountId"]}', 'body': '', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507, 'accountId': 2106, 'accountId1': 2107, 'accountId2': 2108}
+{"accountId":global_vars["accountId"]}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_assistant_api_5</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.5')" >
+        pass</a>
+
+    <div id='div_pt3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.5: {'id': '5', 'name': '更新助理类别', 'describe': '参数正常', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/updateAssistant', 'params': '', 'body': '{"accountId":global_vars["accountId1"],"accountType":9, "crmOrgCode":"H201012070002"}', 'type': '', 'expect_result': '"status":"1"', 'expect_msg': '"msg":"成功"', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507, 'accountId': 2106, 'accountId1': 2107, 'accountId2': 2108}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_assistant_api_6</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.6')" >
+        pass</a>
+
+    <div id='div_pt3.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.6: {'id': '6', 'name': '更新助理类别', 'describe': '参数异常-缺失crmorgcode', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/updateAssistant', 'params': '', 'body': '{"accountId":global_vars["accountId2"],"accountType":9, "crmOrgCode":""}', 'type': '', 'expect_result': '"status":"e1004"', 'expect_msg': '"msg":""', 'expect_stacode': '200', 'errorCode': '"errorCode":""', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507, 'accountId': 2106, 'accountId1': 2107, 'accountId2': 2108}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_assistant_api_7</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.7')" >
+        pass</a>
+
+    <div id='div_pt3.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.7: {'id': '7', 'name': '更新助理类别', 'describe': '参数异常-缺失accounId', 'method': 'post', 'url': 'https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/updateAssistant', 'params': '', 'body': '{"accountId":"","accountType":9, "crmOrgCode":"H201012070002"}', 'type': '', 'expect_result': '', 'expect_msg': '', 'expect_stacode': '400', 'errorCode': '', 'is_run': '0', 'is_global': ''}
+{'pcId': 29849, 'pcId1': 29848, 'attId': 4120635, 'spreadId': 508, 'spreadId1': 507, 'accountId': 2106, 'accountId1': 2107, 'accountId2': 2108}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>24</td>
+    <td>24</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
