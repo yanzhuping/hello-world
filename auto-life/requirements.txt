@@ -6,7 +6,7 @@ numpy==1.17.3
 PyUserInput==0.1.11
 xlrd==1.2.0
 Appium_Python_Client==1.0.2
-Pillow==7.2.0
+Pillow==8.1.1
 pymouse==1.0
 website==1.1
 xlsxwriter==1.3.3
