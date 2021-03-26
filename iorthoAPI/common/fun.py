@@ -11,3 +11,5 @@ def get_fileBasePath():
     return base_dir
 
 # print(get_fileBasePath())
+
+#链接测试数据库

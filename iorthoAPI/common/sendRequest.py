@@ -6,9 +6,14 @@ from requests_toolbelt import MultipartEncoder
 from iorthoAPI.common.global_vars import *
 import os
 from time import sleep
+import urllib3
+from crm_style.function import *
+import traceback
 
 
 def sendRequests(s,apiData):
+
+    urllib3.disable_warnings()
 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36'}
     try:
@@ -23,15 +28,12 @@ def sendRequests(s,apiData):
         if apiData["params"] == "":
             par = None
         else:
-            # print(apiData["params"])
             par = eval(apiData["params"])
-            # print(par)
 
         if apiData["body"] == "":
             body_data = None
         else:
             body_data = eval(apiData["body"])
-            # print(body_data)
 
         if type == "json":
             body = json.dumps(body_data)
@@ -55,23 +57,28 @@ def sendRequests(s,apiData):
 
                 files={key:(value,open(file_path,'rb'))}
 
-        re = s.request(method=method,url=url,data=body,params=par,files=files,headers=header,verify=False,timeout=20)
-
-        # print(re.json())
+        res = s.request(method=method,url=url,data=body,params=par,files=files,headers=header,verify=False,timeout=20)
 
         sleep(2)
-        if is_global == "0":
-            print(set_global(set_global_vars, re.json()))
-        return re
+        if is_global == "":
+            pass
+        else:
+            is_global=eval(is_global)
+            print(set_global(is_global, res.json()))
+        return res
 
     except Exception as e:
+        traceback_info = traceback.format_exc()
+        print(traceback_info)
         print(e)
 
 if __name__ == '__main__':
 
     s = getCookie()
-    testData = readExcel(r'D:\PrivateCode\hello-world\iorthoAPI\data\apitest.xlsx', "makeit")
-    response = sendRequests(s,testData[0])
+    testData = readExcel(r'D:\work\auto-life\iorthoAPI\data\apitest.xlsx', "create_case")
+    print(testData[21])
+    response = sendRequests(s,testData[21])
+    print(response.json())
 
     # print(response.text)
     # print(response.status_code)

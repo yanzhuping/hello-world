@@ -22,6 +22,7 @@ def readExcel(fileName,SheetName="Sheet1"):
              # keys，values这两个列表一一对应来组合转换为字典
              # print(zip(keys, values))
              api_dict = dict(zip(keys, values)) #每一行都转换成一个字典
+             #将is_run字段设置为1，即不存入字典中
              if api_dict['is_run']!='1':
                  # print(api_dict)
                  listApiData.append(api_dict)
@@ -29,7 +30,7 @@ def readExcel(fileName,SheetName="Sheet1"):
     else:
         print("表格未填写数据")
         return None
-    # print(type(listApiData))
+
     return listApiData
 
 if __name__ == '__main__':

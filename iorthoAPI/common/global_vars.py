@@ -5,18 +5,21 @@ import re
 #全局变量
 global_vars={}
 
-#全局变量设置列表
-set_global_vars = [{"name": "accountId", "query": ["data","assistantList" ,0, 'accountId']},
-                   {"name": "accountId1", "query": ["data","assistantList" ,1, 'accountId']},
-                   {"name": "accountId2", "query": ["data","assistantList" ,2, 'accountId']},
-                   {"name": "spreadId", "query": ["doctorSpreadList",0 , 'spreadId']},
-                   {"name": "spreadId1", "query": ["doctorSpreadList",1, 'spreadId']},
-                   {"name": "pcId", "query": ["data","imageList", 20,'pcId']},
-                   {"name": "pcId1", "query": ["data","imageList", 0,'pcId']},
-                   {"name": "attId", "query": ["data","imageList", 0,'attId']},
-                   {"name": "makeit_attId", "query": ['attId']},
-
-                   ]
+# #全局变量设置列表
+# set_global_vars = [{"name": "accountId", "query": ["data","assistantList" ,0, 'accountId']},
+#                    {"name": "accountId1", "query": ["data","assistantList" ,1, 'accountId']},
+#                    {"name": "accountId2", "query": ["data","assistantList" ,2, 'accountId']},
+#                    {"name": "spreadId", "query": ["doctorSpreadList",0 , 'spreadId']},
+#                    {"name": "spreadId1", "query": ["doctorSpreadList",1, 'spreadId']},
+#                    {"name": "pcId", "query": ["data","imageList", 20,'pcId']},
+#                    {"name": "pcId1", "query": ["data","imageList", 0,'pcId']},
+#                    {"name": "attId", "query": ["data","imageList", 0,'attId']},
+#                    {"name": "makeit_attId", "query": ['attId']},
+#                    {"name": "caseId", "query": ['caseId']},
+#                    {"name": "tidingsId", "query": ['tidingsId']},
+#                    {"name":"patientname","query":["cases",0,"name"]}
+#
+#                    ]
 
 #获取多层嵌套的字典中的某个值
 def dict_get(dic, locators, default=None):
