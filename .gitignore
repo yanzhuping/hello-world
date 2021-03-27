@@ -255,7 +255,7 @@ test_report/screenshot/*
 test_report/report.html
 .idea/*
 .idea/**/main.py
-driver.py
+#driver.py
 /node_modules/
 
 
