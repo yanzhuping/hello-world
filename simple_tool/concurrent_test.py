@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import requests, time, json, threading, random
+from iorthoAPI.common.createSession import *
 
 
 class Presstest(object):
@@ -10,35 +11,24 @@ class Presstest(object):
         'Content-Type': 'application/json; charset=UTF-8',
     }
 
-    def __init__(self, login_url, press_url, phone="1376193000", password="123456"):
-        self.login_url = login_url
+    def __init__(self, press_url, account="yanry4548", password="333333"):
         self.press_url = press_url
-        self.phone = phone
+        self.account = account
         self.password = password
-        self.session = requests.Session()
+        self.session = getCookie()
         self.session.headers = self.headers
-
-    def login(self):
-        '''登陆获取session'''
-        data = data = {'t': int(time.time() * 1000), 'userName': self.phone, 'passWord': self.password}
-        res = self.session.post(self.login_url, data=json.dumps(data))
-        XToken = res.json().get('data').get('companyToken')
-        self.session.headers['X-Token'] = XToken
 
     def testinterface(self):
         '''压测接口'''
-        self.session.headers['X-UnionId'] = 'of6uw1CUVhP533sQok'
-        data = {"id": int(''.join(str(random.choice(range(10))) for _ in range(10))),
-                "openId": "oMr0c5LGJjlTc", "addressId": 10, "shipType": "SELF", "totalAmount": 5,
-                "receivable": 5, "carts": [
-                {"amount": 1, "barcode": "1234567890", "skuId": 1, "spec": "34", "itemAmount": 5, "price": 0,
-                 "cover": "xxxx-dd.oss-cn-shanghai.aliyuncs.com/dfc91fd067ac464c096c90af33a196a5.png",
-                 "name": "沙宣洗发水", "packingType": "瓶", "placeOfOrigin": "上海", "productId": "310153323435134976",
-                 "retailPrice": 5, "suitableAge": "1-100"}], "formId": "the formId is a mock one", "comments": "aa"}
+        data = {"crmUserCode": "D202009180002",
+                "userName": "yanry4548",
+                "oldPassWord": "333333",
+                "newPassWord": "333333",
+                "confirmPassWord": "333333"}
         global ERROR_NUM
         try:
             html = self.session.post(self.press_url, data=json.dumps(data))
-            if html.json().get('code') != 0:
+            if html.json().get('msg') != '成功':
                 print(html.json())
                 ERROR_NUM += 1
         except Exception as e:
@@ -79,16 +69,14 @@ class Presstest(object):
 
 
 if __name__ == '__main__':
-    login_url = 'https://ds.xxxxx.com/sys/sysUser/login'
-    press_url = 'https://ds.xxxxx.com/weshop/order/checkout'
-    phone = "1376193000"
-    password = "123456"
+    press_url = 'https://opm-cas.sh-sit.eainc.com:8443/OPM/doctor/updatePassWord'
+    account = "yanry4548"
+    password = "333333"
 
     THREAD_NUM = 1  # 并发线程总数
     ONE_WORKER_NUM = 5  # 每个线程的循环次数
     LOOP_SLEEP = 0.1  # 每次请求时间间隔(秒)
     ERROR_NUM = 0  # 出错数
 
-    obj = Presstest(login_url=login_url, press_url=press_url, phone=phone, password=password)
-    obj.login()
+    obj = Presstest(press_url=press_url, account=account, password=password)
     obj.run()
