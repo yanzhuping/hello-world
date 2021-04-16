@@ -42,11 +42,34 @@ s# not in (select sc.s# from sc,course,teacher where sc.c#=course.c# and
 course.T#=teacher.T# and Teacher.Tname='叶平')
 
 
-查询学过叶平老师课程的同学的学号、姓名
+6/查询学过叶平老师课程的同学的学号、姓名
 select student.s#,student.sname from student where s# in (select sc.s# from
 sc,course,teacher where where sc.c#=course.c# and
 course.T#=teacher.T# and Teacher.Tname='叶平'
 group by s#
 having count(sc.c#)=(select count(c#)from course,teacher where
 teacher.T#=course.T# and Tname='叶平'))；
+
+
+
+7、查询学过“011”并且也学过编号“002”课程的同学的学号、姓名：
+select student.s#,sname from student,sc where
+student.s#=sc.s# and c#='001' and
+exisit (select * from sc as sc_2 where sc.s#=sc_2.s# and sc_2.s#='002')
+
+
+8、查询课程编号“002”的成绩比课程编号“001”课程低的所有同学的学号、姓名：
+Select S#,Sname
+from (select Student.S#,Student.Sname,score ,
+(select score from SC SC_2 where SC_2.S#=Student.S# and SC_2.C#='002') score2
+from Student,SC
+where Student.S#=SC.S# and C#='001') S_2
+where score2 < score;
+
+
+
+
+
+
 '''
+

@@ -6,17 +6,12 @@ from iorthoAPI.common.createSession import *
 
 
 class Presstest(object):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
-        'Content-Type': 'application/json; charset=UTF-8',
-    }
 
     def __init__(self, press_url, account="yanry4548", password="333333"):
         self.press_url = press_url
         self.account = account
         self.password = password
         self.session = getCookie()
-        self.session.headers = self.headers
 
     def testinterface(self):
         '''压测接口'''
@@ -25,9 +20,10 @@ class Presstest(object):
                 "oldPassWord": "333333",
                 "newPassWord": "333333",
                 "confirmPassWord": "333333"}
-        global ERROR_NUM
+        global ERROR_NUM  #出错数
         try:
-            html = self.session.post(self.press_url, data=json.dumps(data))
+            html = self.session.post(self.press_url, data=data)
+            print(html.text)
             if html.json().get('msg') != '成功':
                 print(html.json())
                 ERROR_NUM += 1
@@ -38,17 +34,17 @@ class Presstest(object):
     def testonework(self):
         '''一次并发处理单个任务'''
         i = 0
-        while i < ONE_WORKER_NUM:
+        while i < ONE_WORKER_NUM:  #每个线程的循环次数
             i += 1
-            self.work()
-        time.sleep(LOOP_SLEEP)
+            self.testinterface()
+        time.sleep(LOOP_SLEEP)  #每次请求的时间间隔
 
     def run(self):
         '''使用多线程进程并发测试'''
         t1 = time.time()
         Threads = []
 
-        for i in range(THREAD_NUM):
+        for i in range(THREAD_NUM): #线程数
             t = threading.Thread(target=self.testonework, name="T" + str(i))
             t.setDaemon(True)
             Threads.append(t)
@@ -73,9 +69,9 @@ if __name__ == '__main__':
     account = "yanry4548"
     password = "333333"
 
-    THREAD_NUM = 1  # 并发线程总数
+    THREAD_NUM = 3  # 并发线程总数
     ONE_WORKER_NUM = 5  # 每个线程的循环次数
-    LOOP_SLEEP = 0.1  # 每次请求时间间隔(秒)
+    LOOP_SLEEP = 4 # 每次请求时间间隔(秒)
     ERROR_NUM = 0  # 出错数
 
     obj = Presstest(press_url=press_url, account=account, password=password)

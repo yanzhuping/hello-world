@@ -38,10 +38,7 @@ class Restime():
 
 if __name__ == '__main__':
  Restime=Restime()
- #URL2 = 'http://wthrcdn.etouch.cn/weather_mini'
- #param = {'ip': '8.8.8.8', 'city': '西安'}
- num=500 #压力测试次数
+ num=10 #压力测试次数
  URL2 = 'http://www.kuaidi100.com/query' #地址
  param = {'type' : 'zhongtong' , 'postid' :'73116039505988' } #参数
  Restime.circulation(num,URL2,param)
- input('Press Enter to exit...')

@@ -21,18 +21,19 @@ class AdminLoadTest(TaskSet):
         execution = re.findall(pat1, strr)
         par1 = {'username': 'yanry4548', 'password': '333333', 'execution': '%s' % execution[0], '_eventId': 'submit',
                 'oginType': '0'}
-        r1 = self.client('POST', base_url, headers=header, data=par1, allow_redirects=False, verify=False)
+        r1 = self.client.post( base_url, headers=header, data=par1, allow_redirects=False, verify=False)
         location = r1.headers['Location']
-        r2 = self.client('GET', location, headers=header, allow_redirects=False, verify=False)
+
+        r2 = self.client.get(location, headers=header, allow_redirects=False, verify=False)
         result = r2.headers['Set-Cookie']
         cookie = {'Cookies': result.split(';')[0]}
 
-        r3 = self.client('GET', location, headers=header, allow_redirects=False, verify=False)
-        # print('r3 headers: ', r3.headers)
+        r3 = self.client.get(location, headers=header, allow_redirects=False, verify=False)
+
 
         url = "https://opm-cas.sh-sit.eainc.com:8443/OPM/login/validatelogin"
         data = {}
-        re4 = self.client('post', url, headers=header, data=data, verify=False)
+        re4 = self.client.post(url, headers=header, data=data, verify=False)
 
     def logout(self):
         """
@@ -65,12 +66,8 @@ class AdminLoadTest(TaskSet):
         对后台主页进行压测
         :return:
         """
-        self.client.post("https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/addAssistant",
-                         {
-                             "accountType": 3,
-                             "crmOrgCode": "H201012070002",
-                             "accountName": "接口测试普通助理%s"%ctime()
-                         }
+        self.client.post("https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/addAssistant",{"accountType": 3,"crmOrgCode": "H201012070002",
+                             "accountName": "接口测试普通助理%s"%ctime()}
                          )
 
 
