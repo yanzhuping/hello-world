@@ -25,8 +25,6 @@ class AdminLoadTest(TaskSet):
         location = r1.headers['Location']
 
         r2 = self.client.get(location, headers=header, allow_redirects=False, verify=False)
-        result = r2.headers['Set-Cookie']
-        cookie = {'Cookies': result.split(';')[0]}
 
         r3 = self.client.get(location, headers=header, allow_redirects=False, verify=False)
 
@@ -77,3 +75,5 @@ class RunLoadTests(HttpUser):
     """
     # task_set = AdminLoadTest
     tasks = [AdminLoadTest]
+    min_wait = 3000
+    max_wait = 6000
