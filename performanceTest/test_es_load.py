@@ -4,7 +4,7 @@ import re
 
 class AdminLoadTest(TaskSet):
     """
-    创建后台管理站点压测类，需要继承TaskSet
+    创建压测类，需要继承TaskSet
     可以添加多个测试任务
     """
     def login(self):
@@ -62,11 +62,13 @@ class AdminLoadTest(TaskSet):
     @task
     def admin_index(self):
         """
-        对后台主页进行压测
+        对查询病例接口进行压测
         :return:
         """
-        self.client.post("/OPM/patient/search",{"keyword": '工单测试',"crmOrgCode": "H201912160102,H201912160072,H201611180002,H201601230001",
-                             "crmUserCode": "D201912160050","page":1,"pageSize":20}
+        self.client.post("/OPM/patient/search",
+                         {"keyword": '工单测试',
+                          "crmOrgCode": "H201912160102,H201912160072,H201611180002,H201601230001",
+                          "crmUserCode": "D201912160050","page":1,"pageSize":20}
                          )
 
 
