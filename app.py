@@ -146,5 +146,10 @@ python app.py --env=iortho_sit --test_case=execute/app_authority/app_doctor_acco
 python app.py --env=iortho_sit --test_case=execute/app_authority/app_sale_account_authority.xls --level=1
 
 
-
+#  获取app被测试系统的应用在命令提示符内输入appPackge+appActivity命令：adb shell dumpsys activity recents | findstr intent回车
+   # 4appPackge包名app上的报名信息，通过上方命令获取
+  # 'appPackge':'com.netease.cloudmusic',
+    'appPackage' : 'com.netease.cloudmusic',
+   #  5被测app的入口信息，通过上方命令获取
+   'appActivity':'activity.LoadingActivity',
 '''
