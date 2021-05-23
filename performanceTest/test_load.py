@@ -4,7 +4,7 @@ import re
 
 class AdminLoadTest(TaskSet):
     """
-    创建后台管理站点压测类，需要继承TaskSet
+    创建压测类，需要继承TaskSet
     可以添加多个测试任务
     """
     def login(self):
@@ -61,7 +61,7 @@ class AdminLoadTest(TaskSet):
     @task
     def admin_index(self):
         """
-        对后台主页进行压测
+        对xxx进行压测
         :return:
         """
         self.client.post("https://opm-cas.sh-sit.eainc.com:8443/OPM/assistant/addAssistant",{"accountType": 3,"crmOrgCode": "H201012070002",
