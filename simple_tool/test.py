@@ -5,43 +5,7 @@ import re
 from driver.driver import browser
 from selenium.common.exceptions import NoSuchElementException
 import types
-# driver=browser()
-#
-#
-# driver.get('https://opm-cas.sh-sit.eainc.com:8443/OPM/#/case/list')
-# driver.find_element_by_id("_username").clear()
-# driver.find_element_by_id("_username").send_keys('yanry4548')
-# driver.find_element_by_id("_password").clear()
-# driver.find_element_by_id("_password").send_keys('333333')
-# driver.find_element_by_id("_btn_login").click()
-#
-# driver.find_element_by_xpath("//div[@class='iortho-header']/div/div[2]/div[1]/div[2]/div[5]/img").click()
-# driver.find_element_by_xpath("//div[@class='iortho-header']/div/div[2]/div[1]/div[2]/div[5]/ul/li[1]").click()
-# driver.find_element_by_xpath("//div[@class='menu']/div[1]/div[1]").click()
-# # driver.find_element_by_xpath('''[ng-click="$ctrl.addAssist=true;$ctrl.closeAddAssist = 'select';"]''')
-# eles=driver.find_elements_by_xpath('//div[@ng-repeat="item in $ctrl.list track by $index"]')
-# print(eles)
-# elelist=[]
-# for ele in eles:
-#     print(ele.text)
-#     print(ele)
-#     if ele.text !="":
-#         elelist.append(ele)
-# elelist[-1].click()
-#
 
-# for i,ele in enumerate(eles):
-#     ele.find_element_by_xpath()
-
-# name='女朋友'
-# def lingyifan():
-#     global name
-#     print('我想要',name,sep='')
-#     name='男朋友'
-# def dingshengtong():
-#     print('我想要',name,sep='')
-# lingyifan()
-# dingshengtong()
 # dict={
 #  "createTime": "select createTime from opm_doctor where crmUserCode='D202009180002'",
 #  "modifyTime": "select modifyTime from opm_doctor where crmUserCode='D202009180002'"
